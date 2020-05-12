@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Olga Ismailova](https://up.htmlacademy.ru/htmlcss/28/user/1394731).
-* Наставник: `Неизвестно`.
+* Наставник: [Анастасия Полозова](https://htmlacademy.ru/profile/id258631).
 
 ---
 
