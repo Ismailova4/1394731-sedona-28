@@ -2,11 +2,68 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+     <header class="main-header">
+       <nav class="main-navigation">
+        <img src="img/index-logo.svg" width="50" height="40" alt="Логотип города Седона"> <!-- Маленькая иконка city of sedona-->
+          <ul class="site-navigation">
+           <li><a href="blank.html">Информация</a></li>
+           <li><a href="blank.html">Фото и видео</a></li>
+           <li><a href="blank.html">Карта штата</a></li>
+           <li><a href="hotels.html">Гостиницы</a></li>
+         </ul>
+       </nav>
+     </header>
+       <main class="container">
+         <h1 class="visually-hidden">Sedona</h1>
+         <section class="intro">
+           <a>
+          <img src="img/main-logo.svg" width="300" height="150" alt="Главный логотип Седона"> <!--Предположила, что Welcome to the gorgeous Sedona и тд - логотип в формате svg-->
+           </a>
+           <h2 class="visually-hidden">Причины</h2>
+           <h3>Седона - небольшой городок в Аризоне, <br> 
+             заслуживающий большего!</h3>
+           <p>
+             Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
+           </p>
+        </section>  
+         <section class="booking">
+           <h3>Заинтересовались?</h3> <!-- Вижу по макету, что здесь уместнее h2, исходя из размера шрифта, не знаю как решить эту задачу в контексте сквозной иерархии заголовков-->
+           <p>
+             Укажите предполагаемые даты поездки,<br>
+             и мы покажем лучшие предложения гостиниц в Седоне!
+           </p>
+         </section>
+       </main>
+    <footer>
+      <section class="contacts">
+        <h2>#visitsedona</h2>
+        <p>
+          тел. +7(495) 666-01-66
+        </p>
+      </section>
+      <section>
+        <h2 class="visually-hidden">Давайте дружить</h2>
+        <ul class="social-list">
+          <li>
+            <a href="#">Twitter</a>
+          </li>
+          <li>
+            <a href="#">Facebook</a>
+          </li>
+          <li>
+            <a href="#">YouTube</a>
+          </li>
+        </ul>
+      </section>
+      <p>
+        Website by
+        <a href="https://htmlacademy.ru">
+        <img src="img/htmlacademy.svg" width="70" height="100" alt="Логотип HTML Academy">
+        </a>
+      </p>
+    </footer>
   </body>
 </html>
