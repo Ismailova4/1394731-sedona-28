@@ -2,11 +2,93 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Отели Седоны</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+    <header class="main-header">
+      <nav class="main-navigation">
+       <img src="img/index-logo.svg" width="50" height="40" alt="Логотип города Седона"> <!-- Маленькая иконка city of sedona-->
+         <ul class="site-navigation">
+          <li><a href="blank.html">Информация</a></li>
+          <li><a href="blank.html">Фото и видео</a></li>
+          <li><a href="blank.html">Карта штата</a></li>
+          <li><a href="hotels.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
+     <main class="container">
+       <h1 class="visually-hidden">Отели</h1>
+       <section class="hotels">
+         <ul>
+           <li>
+              <h2>Amara Resort & Spa</h2>
+              <p>
+                <img src="img/amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
+              </p>
+              <p>
+                Гостиница
+                <span>от 4000 р.</span>
+                <button type="button">Подробнее</button>
+                <button type="button">Забронировать</button>
+              </p>
+              <p>Рейтинг: 8,5</p>
+           </li>
+           <li>
+            <h2>Desert Quail Inn</h2>
+            <p>
+              <img src="img/desert_inn.jpg" width="135" height="90" alt="Desert Quail Inn">
+            </p>
+            <p>
+              Мотель
+              <span>от 3000 р.</span>
+              <button type="button">Подробнее</button>
+              <button type="button">Забронировать</button>
+            </p>
+            <p>Рейтинг: 8,9</p>
+           </li>
+           <li>
+            <h2>Villas at Poco Diablo</h2>
+            <p>
+              <img src="img/poco_diablo.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+            </p>
+            <p>
+              Апартменты
+              <span>от 2000 р.</span>
+              <button type="button">Подробнее</button>
+              <button type="button">Забронировать</button>
+            </p>
+            <p>Рейтинг: 9,2</p>
+           </li>
+         </ul>  
+       </section>
+     </main>
+     <footer>
+      <section class="contacts">
+        <h2>#visitsedona</h2>
+        <p>
+          тел. +7(495) 666-01-66
+        </p>
+      </section>
+      <section>
+        <h2 class="visually-hidden">Давайте дружить</h2>
+        <ul class="social-list">
+          <li>
+            <a href="#">Twitter</a>
+          </li>
+          <li>
+            <a href="#">Facebook</a>
+          </li>
+          <li>
+            <a href="#">YouTube</a>
+          </li>
+        </ul>
+      </section>
+      <p>
+        Website by
+        <a href="https://htmlacademy.ru">
+        <img src="img/htmlacademy.svg" width="70" height="100" alt="Логотип HTML Academy">
+        </a>
+      </p>
+    </footer>
   </body>
 </html>
