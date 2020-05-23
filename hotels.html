@@ -6,7 +6,7 @@
   </head>
   <body>
     <header class="header">
-      <nav class="main-navigation">
+      <nav class="header-navigation">
         <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип города Седона">  
          <ul class="site-navigation">
           <li><a href="blank.html">Информация</a></li>
@@ -18,6 +18,46 @@
     </header>
      <main class="container">
        <h1 class="visually-hidden">Отели</h1>
+       <section>
+         <h2 class="visually-hidden">Фильтр отелей</h2>
+         <form action="https://echo.htmlacademy.ru" method="get"> 
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+               <input type="checkbox" id="pool" name="pool" checked> 
+               <label for="pool">Бассейн</label>
+              </li>
+              <li>
+               <input type="checkbox" id="parking" name="parking"> 
+               <label for="parking">Парковка</label>
+              </li>
+              <li>
+               <input type="checkbox" id="wi-fi" name="wi-fi">
+               <label for="wi-fi">Wi-fi</label>
+              </li>
+            </ul>
+          </fieldset>  
+          <fieldset>
+           <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" id="hotel" name="hotel" checked>
+                <label for="hotel">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" id="motel" name="motel" checked>
+                <label for="motel">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" id="apartments" name="apartments" checked>    
+                <label for="apartments">Апартменты</label>
+              </li>
+            </ul>
+          </fieldset> 
+
+         </form>
+       </section>
        <section class="hotels">
          <ul>
            <li>
