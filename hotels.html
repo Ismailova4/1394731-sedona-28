@@ -55,7 +55,40 @@
               </li>
             </ul>
           </fieldset> 
-
+           <div class="range range-cost">
+             <label for="range-cost">Стоимость в сутки(р)</label>
+             <p class="range range-start"><!--затрудняюсь с выбором, как правильно разметить этот блок - span/p/...-->
+               от 0                   
+             </p>
+             <p class="range range-end">
+               до 3000               
+            </p>
+             <input type="range" id="range-cost" name="range-cost" min="0" max="3000" step="100"><!--планирую реализовать поле с двумя ползунками с помощью js-->
+           </div> 
+           <button type="submit">Показать</button>
+           <div class="output">
+           <p>
+             Найдено:3
+           </p> 
+            <fieldset> 
+              <legend>Сортировка:</legend> 
+              <ul>
+                <li>
+                  по цене    
+                </li>
+                <li>
+                  по типу   
+                </li>
+                <li>
+                  по рейтингу  
+                </li>
+              </ul>
+            </fieldset>
+            <p class="buttons">
+            <input class="up" type="image" src="img/icon-up-dir.svg">
+            <input class="down" type="image" src="img/icon-down-dir.svg">
+            </p>
+         </div>
          </form>
        </section>
        <section class="hotels">
