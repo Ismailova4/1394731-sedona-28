@@ -5,8 +5,8 @@
     <title>Седона</title>
   </head>
   <body>
-     <header class="main-header">
-       <nav class="main-navigation">
+     <header class="header">
+       <nav class="header-navigation">
         <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип города Седона"> 
           <ul class="site-navigation">
            <li><a href="blank.html">Информация</a></li>
@@ -31,7 +31,7 @@
         </section>  
         <section class="features">
           <h3 class="visually-hidden">Преимущества</h3>
-          <ul> <!-- долго думала использовать ol или ul, в итоге склонилась к варианту ul -->
+          <ul> 
             <li>
               <h3>Настоящий городок</h3>
               <span>
@@ -43,7 +43,7 @@
             </li>
             <li>
               <figure class="image">
-                <img src="img/cafe.jpg" width="800" height="256" alt="Кафе в Седоне"> <!--маркер от пункта списка li уберу с помощью css -->
+                <img src="img/cafe.jpg" width="800" height="256" alt="Кафе в Седоне"> 
               </figure>
             </li>
             <li>
@@ -126,6 +126,28 @@
          <div class="map">
            <img src="img/map.jpg" width="1199" height="594" alt="Как добраться">
          </div>
+       <section>
+         <h3>Поиск гостиницы в Седоне</h3>
+         <form action="https://echo.htmlacademy.ru" method="post">
+           <p>
+            <label for="checkin-date">Дата заезда:</label>                  
+            <input id="checkin-date" type="text" name="date" placeholder="01.01.2020">     
+          </p>
+          <p>
+            <label for="checkout-date">Дата выезда:</label>                  
+            <input id="checkout-date" type="text" name="date" placeholder="01.01.2020">     
+          </p>
+          <p>
+            <label for="adults">Взрослые:</label>                  
+            <input id="adults" type="number" name="adults" >     
+          </p>
+          <p>
+            <label for="childs">Дети:</label>                  
+            <input id="childs" type="number" name="childs" >     
+          </p>
+          <button type="submit">Найти</button>
+         </form>  
+       </section>  
        </main>
     <footer>
       <section class="contacts">
