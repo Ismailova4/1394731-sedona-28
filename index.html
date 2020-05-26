@@ -34,9 +34,10 @@
             </p>
            </div>
         </section>  
-        <section class="features-list">
+        <section class="features">
           <h3 class="visually-hidden">Преимущества</h3>
-          <ul> 
+        <div class="wrapper">
+          <ul class="features-list"> 
             <li>
               <h3>Настоящий городок</h3>
               <span>
@@ -118,21 +119,23 @@
               </p>
             </li>
           </ul>
+         </div> 
         </section> 
          <section class="booking">
-          <a>
-          <h3>Заинтересовались?</h3> 
-          </a><!--Оборачиваю заголовок в ссылку для открытия попапа в будущем--> 
-          <p>
+          <div class="booking"> 
+           <button class="button" type="button">Заинтересовались?</button>
+           <p>
              Укажите предполагаемые даты поездки,<br>
              и мы покажем лучшие предложения гостиниц в Седоне!
            </p>
+           </div>
          </section>
          <div class="map">
            <img src="img/map.jpg" width="1199" height="594" alt="Как добраться">
          </div>
        <section>
          <h3>Поиск гостиницы в Седоне</h3>
+         <div class="reservation-form">
          <form action="https://echo.htmlacademy.ru" method="post">
            <p>
             <label for="checkin-date">Дата заезда:</label>                  
@@ -152,6 +155,7 @@
           </p>
           <button type="submit">Найти</button>
          </form>  
+         </div>
        </section>  
        </main>
     <footer>

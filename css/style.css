@@ -26,6 +26,9 @@ body {
   color: var(--basic-extra-dark);
   text-transform: uppercase;
   background-color: var(--basic-white);
+  background-image: url("../img/background_\ photo.jpg");
+  background-repeat: no-repeat;
+  
 }
 
 @font-face {
@@ -70,6 +73,14 @@ img {
   opacity: 0.3;
 }
 
+.site-navigation a:active {
+  color: var(--basic-dark);
+}
+
+.intro {
+  
+}
+
 .reason {
   text-align: center;
   line-height: 26px;
@@ -83,13 +94,31 @@ img {
   font-size: 21px;  
 }
 
+.features-list {
+  list-style: none;
+}
+
 .feature-item {
   list-style: none;
   text-align: center;
 }
 
+.booking {
+  line-height: 24px; 
+  text-align: center;
+}
 
-
+.button {
+  padding: 0;
+  border: none;
+  font-style: inherit;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
 
 
 
