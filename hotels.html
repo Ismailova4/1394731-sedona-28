@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Отели Седоны</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -55,16 +58,12 @@
               </li>
             </ul>
           </fieldset> 
-           <div class="range range-cost">
-             <label for="range-cost">Стоимость в сутки(р)</label>
-             <p class="range range-start"><!--затрудняюсь с выбором, как правильно разметить этот блок - span/p/...-->
-               от 0                   
-             </p>
-             <p class="range range-end">
-               до 3000               
-            </p>
-             <input type="range" id="range-cost" name="range-cost" min="0" max="3000" step="100"><!--планирую реализовать поле с двумя ползунками с помощью js-->
-           </div> 
+            <label for="price1"></label>     
+           <input type="text" id="price1" name="price1" min="0" max="3000">
+           <input type="text" id="price2" name="price2" min="0" max="3000"> 
+            
+
+
            <button type="submit">Показать</button>
            <div class="output">
            <p>
@@ -92,6 +91,7 @@
          </form>
        </section>
        <section class="hotels">
+         <h2 class="visually-hidden">Подборка отелей</h2>
          <ul>
            <li>
               <h2>Amara Resort & Spa</h2>

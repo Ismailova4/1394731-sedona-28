@@ -1,0 +1,35 @@
+:root {
+  --basic-black: #000000;
+  --basic-extra-dark: #333333;
+  --basic-dark-brown: #503e33;
+  --basic-brown: #604e43;
+  --basic-dark: #766357;
+  --basic-grey: #666666;
+  --basic-dark-blue: #5496bd;
+  --basic-blue: #669ec0;
+  --basic-neutral: #81b3d2;
+  --basic-extra-light: #eeeeee;
+  --basic-light: #e5e5e5;
+  --basic-white: #ffffff;
+
+  --special: #f2f2f2;
+}
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: var(--special);
+}
+
+@font-face {
+  font-family: "ptsans";
+  src: url("ptsans.woff2") format("woff2"),
+       url("ptsans.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
