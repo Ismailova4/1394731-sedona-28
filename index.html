@@ -5,7 +5,7 @@
     <title>Седона</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="normalize.css" rel="stylesheet">
-    <link href="stylesheet.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
      <header class="header">
@@ -26,13 +26,15 @@
           <img src="img/intro-welcome.svg" width="456" height="350" alt="Главный логотип Седона"> 
            </a>
            <h2 class="visually-hidden">Причины</h2>
-           <h3>Седона - небольшой городок в Аризоне, <br> 
+           <div class="reason">
+            <h3>Седона - небольшой городок в Аризоне, <br> 
              заслуживающий большего!</h3>
-           <p>
+            <p>
              Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
-           </p>
+            </p>
+           </div>
         </section>  
-        <section class="features">
+        <section class="features-list">
           <h3 class="visually-hidden">Преимущества</h3>
           <ul> 
             <li>
@@ -51,21 +53,21 @@
             </li>
             <li>
               <ul>
-                <li>
+                <li class="feature-item">
                   <img src="img/icon-1.svg" width="75" height="72" alt="Жилье"> 
                   <h3>Жилье</h3>
                   <p>
                     Рекомендуем пожить в настоящем мотеле, все как в кино!
                   </p>
                 </li>
-                <li>
+                <li class="feature-item">
                   <img src="img/icon-3.svg" width="75" height="70" alt="Еда">
                   <h3>Еда</h3>
                   <p>
                     Всегда заказывайте фирменный бургер, вы не разочаруетесь!
                   </p>
                 </li>
-                <li>
+                <li class="feature-item">
                   <img src="img/icon-2.svg" width="64" height="77" alt="Сувениры">
                   <h3>Сувениры</h3>
                   <p>

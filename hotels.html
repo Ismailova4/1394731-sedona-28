@@ -5,7 +5,7 @@
     <title>Отели Седоны</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="normalize.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -25,7 +25,7 @@
          <h2 class="visually-hidden">Фильтр отелей</h2>
          <form action="https://echo.htmlacademy.ru" method="get"> 
           <fieldset>
-            <legend>Инфраструктура:</legend>
+            <legend class="features">Инфраструктура:</legend>
             <ul>
               <li>
                <input type="checkbox" id="pool" name="pool" checked> 
@@ -42,7 +42,7 @@
             </ul>
           </fieldset>  
           <fieldset>
-           <legend>Тип жилья:</legend>
+           <legend class="features">Тип жилья:</legend>
             <ul>
               <li>
                 <input type="checkbox" id="hotel" name="hotel" checked>
@@ -58,12 +58,21 @@
               </li>
             </ul>
           </fieldset> 
-            <label for="price1"></label>     
-           <input type="text" id="price1" name="price1" min="0" max="3000">
-           <input type="text" id="price2" name="price2" min="0" max="3000"> 
-            
-
-
+           <div class="range-slider">
+              <h2 class="features">Стоимость в сутки (р):</h2>
+             <div class="price"><!--оборачиваю в div для создания рамки вокруг span'ов-->  
+              <span>
+                 От 0                           
+               </span>
+               <span>
+                 До 3000
+               </span>
+             </div> 
+            <div class="range-group">
+             <input type="range" id="min-price" value="0" min="0" max="3000" step="100">  
+             <input type="range" id="max-price" value="0" min="0" max="3000" step="100">  
+            </div>
+            </div>
            <button type="submit">Показать</button>
            <div class="output">
            <p>
