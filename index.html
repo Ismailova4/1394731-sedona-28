@@ -23,7 +23,7 @@
          <h1 class="visually-hidden">Sedona</h1>
          <section class="intro">
            <a>
-          <img src="img/intro-welcome.svg" width="456" height="350" alt="Главный логотип Седона"> 
+          <img class="logo" src="img/intro-welcome.svg" width="456" height="350" alt="Главный логотип Седона"> 
            </a>
            <h2 class="visually-hidden">Причины</h2>
            <div class="reason">
@@ -33,11 +33,12 @@
              Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
             </p>
            </div>
-        </section>  
+        </section>
+
+        <div class="wrapper">
         <section class="features">
           <h3 class="visually-hidden">Преимущества</h3>
-        <div class="wrapper">
-          <ul class="features-list"> 
+           <ul class="features-list"> 
             <li>
               <h3>Настоящий городок</h3>
               <span>
@@ -119,11 +120,12 @@
               </p>
             </li>
           </ul>
-         </div> 
-        </section> 
+         </section> 
+         </div>
+
          <section class="booking">
           <div class="booking"> 
-           <button class="button" type="button">Заинтересовались?</button>
+           <button class="button-form" type="button">Заинтересовались?</button>
            <p>
              Укажите предполагаемые даты поездки,<br>
              и мы покажем лучшие предложения гостиниц в Седоне!
@@ -134,9 +136,9 @@
            <img src="img/map.jpg" width="1199" height="594" alt="Как добраться">
          </div>
        <section>
-         <h3>Поиск гостиницы в Седоне</h3>
          <div class="reservation-form">
-         <form action="https://echo.htmlacademy.ru" method="post">
+         <button class="button button-booking" type="button">Поиск гостиницы в Седоне</button>
+          <form action="https://echo.htmlacademy.ru" method="post">
            <p>
             <label for="checkin-date">Дата заезда:</label>                  
             <input id="checkin-date" type="text" name="date" placeholder="01.01.2020">     
@@ -153,10 +155,10 @@
             <label for="childs">Дети:</label>                  
             <input id="childs" type="number" name="childs" >     
           </p>
-          <button type="submit">Найти</button>
+          <button class="button" type="submit">Найти</button>
          </form>  
-         </div>
-       </section>  
+         </section>
+        </div>  
        </main>
     <footer>
       <section class="contacts">
@@ -166,21 +168,21 @@
         </p>
       </section>
       <section>
-        <h2 class="visually-hidden">Давайте дружить</h2>
+        <h2 class="visually-hidden">Давайте дружить</h2><!--не могу найти инфу как правильно прятать, какие стили для visually-hidden должны быть-->
         <ul class="social-list">
           <li>
-            <a href="blank.html">
-              <img src="img/twitter.svg" width="17" height="17" alt="Twitter"><!--фон иконкам сделаю с помощью css-->
+            <a class="button button-social" href="blank.html">
+              <img src="img/twitter.svg" width="17" height="17" alt="Twitter">
             </a>
           </li>
           <li>
-            <a href="blank.html">
+            <a class="button button-social" href="blank.html">
               <img src="img/fb-icon.svg" width="12" height="22" alt="Facebook">
             </a>
           </li>
           <li>
-            <a href="blank.html">
-              <img src="img/welcome.svg" width="20" height="16" alt="YouTube">
+            <a class="button button-social" href="blank.html">
+              <img src="img/youtube.svg" width="20" height="16" alt="YouTube">
             </a>
           </li>
         </ul>

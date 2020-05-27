@@ -26,7 +26,10 @@ body {
   color: var(--basic-extra-dark);
   text-transform: uppercase;
   background-color: var(--basic-white);
-  background-image: url("../img/background_\ photo.jpg");
+  background-image: url("../img/background_\ photo.jpg"),
+                    url("../img/intro-mask.svg"),
+                    url("../img/shape.svg"); /*с фоном проблемы, пока не разобралась почему; не уверена, точно ли в body в случае Седоны нужно подключать фон*/
+  background-position: top center;
   background-repeat: no-repeat;
   
 }
@@ -77,10 +80,6 @@ img {
   color: var(--basic-dark);
 }
 
-.intro {
-  
-}
-
 .reason {
   text-align: center;
   line-height: 26px;
@@ -108,7 +107,7 @@ img {
   text-align: center;
 }
 
-.button {
+.button-form {
   padding: 0;
   border: none;
   font-style: inherit;
@@ -120,10 +119,51 @@ img {
   cursor: pointer;
 }
 
+.button {
+  background-color: var(--basic-neutral);
+  color: var(--basic-white);
+  font-size: 21px;
+  font-style: inherit;
+  font-weight: bold;
+  text-transform: inherit;
+}
 
+.button:hover {
+  background-color: var(--basic-blue);
+}
 
+.button:focus {
+  background-color: var(--basic-dark-blue);
+}
 
+.social-list {
+  list-style: none;
+}
 
+.button-social {
+  background-size: 46px 48px;/*хочу задать размер фона кнопкам с соц-сетями, пока не получается*/
+}
+
+.hotels-list {
+  list-style: none;
+ }
+
+ .button-hotel {
+  font-size: 14px;
+  font-style: normal;
+}
+
+.button-booking {
+  background-color: var(--basic-dark);
+  font-size: 14px;
+}
+.button-booking:hover {
+  background-color: var(--basic-brown);
+}
+
+.button:focus {
+  background-color: var(--basic-dark-brown) ;
+}
 
 
 
