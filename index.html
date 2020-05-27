@@ -18,13 +18,14 @@
            <li><a href="hotels.html">Гостиницы</a></li>
          </ul>
        </nav>
+       <a>
+        <img class="logo" src="img/intro-welcome.svg" width="456" height="350" alt="Главный логотип Седона"><!--теперь не могу отцентровать svg логотип--> 
+       </a>
      </header>
        <main class="container">
          <h1 class="visually-hidden">Sedona</h1>
          <section class="intro">
-           <a>
-          <img class="logo" src="img/intro-welcome.svg" width="456" height="350" alt="Главный логотип Седона"> 
-           </a>
+           
            <h2 class="visually-hidden">Причины</h2>
            <div class="reason">
             <h3>Седона - небольшой городок в Аризоне, <br> 
@@ -162,13 +163,15 @@
        </main>
     <footer>
       <section class="contacts">
+       <div class="contacts">
         <h2>#visitsedona</h2>
-        <p>
+        <p class="phone-number">
           тел. +7(495) 666-01-66
         </p>
+        </div>
       </section>
       <section>
-        <h2 class="visually-hidden">Давайте дружить</h2><!--не могу найти инфу как правильно прятать, какие стили для visually-hidden должны быть-->
+        <h2 class="visually-hidden">Давайте дружить</h2>
         <ul class="social-list">
           <li>
             <a class="button button-social" href="blank.html">
@@ -182,12 +185,15 @@
           </li>
           <li>
             <a class="button button-social" href="blank.html">
+              <svg><!--пробую из разметки рисовать фон для иконок, фон перекрывает сам значок соц.сети-->
+                <rect width="46" height="48"  fill="#81b3d2"></rect>
+               </svg> 
               <img src="img/youtube.svg" width="20" height="16" alt="YouTube">
             </a>
           </li>
         </ul>
       </section>
-      <p>
+      <p class="developer">
         Website by
         <a href="https://htmlacademy.ru">
         <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">

@@ -26,12 +26,6 @@ body {
   color: var(--basic-extra-dark);
   text-transform: uppercase;
   background-color: var(--basic-white);
-  background-image: url("../img/background_\ photo.jpg"),
-                    url("../img/intro-mask.svg"),
-                    url("../img/shape.svg"); /*с фоном проблемы, пока не разобралась почему; не уверена, точно ли в body в случае Седоны нужно подключать фон*/
-  background-position: top center;
-  background-repeat: no-repeat;
-  
 }
 
 @font-face {
@@ -57,6 +51,11 @@ img {
   line-height: 26px;
   color: var(--basic-black);
   background-color: var(--basic-white);
+  background-image: url("../img/group.png"),
+                    url("../img/bg.jpg");               
+  background-position: bottom center, top center;
+  background-repeat: no-repeat;
+
 }
 
 .site-navigation {
@@ -141,7 +140,7 @@ img {
 }
 
 .button-social {
-  background-size: 46px 48px;/*хочу задать размер фона кнопкам с соц-сетями, пока не получается*/
+  fill: var(--basic-neutral);/*хочу задать размер фона кнопкам с соц-сетями, пока не получается*/
 }
 
 .hotels-list {
@@ -165,5 +164,21 @@ img {
   background-color: var(--basic-dark-brown) ;
 }
 
+.phone-number {
+  font-size: 21px;  
+  line-height: 26px;
+  font-weight: bold;
+}
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.developer {
+  line-height: 26px;
+}
 
