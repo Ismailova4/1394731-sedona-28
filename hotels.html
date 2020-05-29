@@ -27,9 +27,9 @@
        <section>
          <h2 class="visually-hidden">Фильтр отелей</h2>
          <form action="https://echo.htmlacademy.ru" method="get"> 
-          <fieldset>
+          <fieldset class="group">
             <legend class="features">Инфраструктура:</legend>
-            <ul>
+            <ul class="facilities">
               <li>
                <input type="checkbox" id="pool" name="pool" checked> 
                <label for="pool">Бассейн</label>
@@ -44,9 +44,9 @@
               </li>
             </ul>
           </fieldset>  
-          <fieldset>
+          <fieldset class="group">
            <legend class="features">Тип жилья:</legend>
-            <ul>
+            <ul class="accomodation"> 
               <li>
                 <input type="checkbox" id="hotel" name="hotel" checked>
                 <label for="hotel">Гостиница</label>
@@ -60,7 +60,7 @@
                 <label for="apartments">Апартменты</label>
               </li>
             </ul>
-          </fieldset> 
+          </fieldset class="group"> 
            <div class="range-slider">
               <h2 class="features">Стоимость в сутки (р):</h2>
              <div class="price"><!--оборачиваю в div для создания рамки вокруг span'ов-->  
@@ -81,9 +81,9 @@
            <p>
              Найдено:3
            </p> 
-            <fieldset> 
+            <fieldset class="group"> 
               <legend>Сортировка:</legend> 
-              <ul>
+              <ul class="sort">
                 <li>
                   по цене    
                 </li>
@@ -182,10 +182,12 @@
      </main>
      <footer>
       <section class="contacts">
+       <div class="contacts">
         <h2>#visitsedona</h2>
-        <p>
+        <p class="phone-number">
           тел. +7(495) 666-01-66
         </p>
+        </div>
       </section>
       <section>
         <h2 class="visually-hidden">Давайте дружить</h2>
@@ -207,7 +209,7 @@
           </li>
         </ul>
       </section>
-      <p>
+      <p class="developer">
         Website by
         <a href="https://htmlacademy.ru">
         <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">

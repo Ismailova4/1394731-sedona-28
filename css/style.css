@@ -8,6 +8,7 @@
   --basic-dark-blue: #5496bd;
   --basic-blue: #669ec0;
   --basic-neutral: #81b3d2;
+  --basic-neutral-light: #eBeBeB;;
   --basic-extra-light: #eeeeee;
   --basic-light: #e5e5e5;
   --basic-white: #ffffff;
@@ -45,6 +46,16 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* header */
+
 .header {
   font-size: 14px;
   font-weight: bold;
@@ -79,12 +90,14 @@ img {
   color: var(--basic-dark);
 }
 
-.reason {
+/* main-content */
+
+.intro {
   text-align: center;
   line-height: 26px;
 }
 
-.reason h3 {
+.intro h3 {
   font-size: 21px;
 }
 
@@ -106,6 +119,16 @@ img {
   text-align: center;
 }
 
+.social-list {
+  list-style: none;
+}
+
+.hotels-list {
+  list-style: none;
+ }
+
+ /* buttons */
+
 .button-form {
   padding: 0;
   border: none;
@@ -125,6 +148,7 @@ img {
   font-style: inherit;
   font-weight: bold;
   text-transform: inherit;
+  border: none;
 }
 
 .button:hover {
@@ -133,19 +157,8 @@ img {
 
 .button:focus {
   background-color: var(--basic-dark-blue);
+  outline: none;
 }
-
-.social-list {
-  list-style: none;
-}
-
-.button-social {
-  fill: var(--basic-neutral);/*хочу задать размер фона кнопкам с соц-сетями, пока не получается*/
-}
-
-.hotels-list {
-  list-style: none;
- }
 
  .button-hotel {
   font-size: 14px;
@@ -160,9 +173,11 @@ img {
   background-color: var(--basic-brown);
 }
 
-.button:focus {
+.button:focus:not(.button-hotel):not(.button-search) {
   background-color: var(--basic-dark-brown) ;
 }
+
+/* footer */
 
 .phone-number {
   font-size: 21px;  
@@ -170,15 +185,90 @@ img {
   font-weight: bold;
 }
 
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
 
 .developer {
   line-height: 26px;
 }
+
+/* lists on inner page */
+
+.up,
+.down {
+  outline: none;
+}
+
+.group {
+  border: none;
+}
+
+.facilities,
+.accomodation,
+.sort {
+  list-style: none;
+}
+
+.hotels h2:hover {
+  color: var(--basic-neutral);
+}
+
+.hotels h2:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* Modal */
+
+.modal {
+  font-weight: bold;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  line-height: 26px;
+}
+
+.modal .button-booking,
+.button-search {
+   font-size: 21px;
+   font-weight: bold;
+ }
+
+.search-form input[type="text"],
+.search-form input[type="number"] {
+  font: inherit;
+  font-weight: bold;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--special);
+  border: none;
+}
+
+.search-form input[type="text"]:hover {
+  background-color: var(--basic-neutral-light);
+}
+
+.search-form input[type="text"]:focus {
+  background-color: var(--basic-white);
+  outline: none;
+}
+
+.search-form input[type="number"]:focus {
+  outline: none;
+}
+
+.checkin-date,
+.checkout-date {
+  background-image: url("../img/calendar.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.adults,
+.childs {
+  background-image: url("../img/rectangle.svg"),
+                    url("../img/union.svg");
+  background-position: right 20px;
+  background-repeat: no-repeat;
+}
+
+
 

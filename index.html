@@ -8,6 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+
      <header class="header">
        <nav class="header-navigation">
         <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип города Седона"> 
@@ -19,22 +20,21 @@
          </ul>
        </nav>
        <a>
-        <img class="logo" src="img/intro-welcome.svg" width="456" height="350" alt="Главный логотип Седона"><!--теперь не могу отцентровать svg логотип--> 
+        <img class="logo" src="img/intro-welcome.svg" width="456" height="350" alt="Главный логотип Седона">
        </a>
      </header>
+
        <main class="container">
          <h1 class="visually-hidden">Sedona</h1>
+
          <section class="intro">
-           
            <h2 class="visually-hidden">Причины</h2>
-           <div class="reason">
             <h3>Седона - небольшой городок в Аризоне, <br> 
              заслуживающий большего!</h3>
             <p>
              Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
             </p>
-           </div>
-        </section>
+         </section>
 
         <div class="wrapper">
         <section class="features">
@@ -136,31 +136,9 @@
          <div class="map">
            <img src="img/map.jpg" width="1199" height="594" alt="Как добраться">
          </div>
-       <section>
-         <div class="reservation-form">
-         <button class="button button-booking" type="button">Поиск гостиницы в Седоне</button>
-          <form action="https://echo.htmlacademy.ru" method="post">
-           <p>
-            <label for="checkin-date">Дата заезда:</label>                  
-            <input id="checkin-date" type="text" name="date" placeholder="01.01.2020">     
-          </p>
-          <p>
-            <label for="checkout-date">Дата выезда:</label>                  
-            <input id="checkout-date" type="text" name="date" placeholder="01.01.2020">     
-          </p>
-          <p>
-            <label for="adults">Взрослые:</label>                  
-            <input id="adults" type="number" name="adults" >     
-          </p>
-          <p>
-            <label for="childs">Дети:</label>                  
-            <input id="childs" type="number" name="childs" >     
-          </p>
-          <button class="button" type="submit">Найти</button>
-         </form>  
-         </section>
-        </div>  
+          
        </main>
+
     <footer>
       <section class="contacts">
        <div class="contacts">
@@ -185,9 +163,6 @@
           </li>
           <li>
             <a class="button button-social" href="blank.html">
-              <svg><!--пробую из разметки рисовать фон для иконок, фон перекрывает сам значок соц.сети-->
-                <rect width="46" height="48"  fill="#81b3d2"></rect>
-               </svg> 
               <img src="img/youtube.svg" width="20" height="16" alt="YouTube">
             </a>
           </li>
@@ -196,9 +171,33 @@
       <p class="developer">
         Website by
         <a href="https://htmlacademy.ru">
-        <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">
+        <img class="logo-developer" src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">
         </a>
       </p>
     </footer>
+
+    <section class="modal">
+      <button class="button button-booking" type="button">Поиск гостиницы в Седоне</button>
+       <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+         <label for="checkin-date">Дата заезда:</label>                  
+         <input class="checkin-date" id="checkin-date" type="text" name="date" placeholder="01.01.2020">     
+       </p>
+       <p>
+         <label for="checkout-date">Дата выезда:</label>                  
+         <input class="checkout-date" id="checkout-date" type="text" name="date" placeholder="01.01.2020">     
+       </p>
+       <p>
+         <label for="adults">Взрослые:</label>                  
+         <input class="adults" id="adults" type="number" name="adults" >     
+       </p>
+       <p>
+         <label for="childs">Дети:</label>                  
+         <input class="childs" id="childs" type="number" name="childs" >     
+       </p>
+       <button class="button button-search" type="submit">Найти</button>
+      </form>  
+      </section>
+    
   </body>
 </html>
