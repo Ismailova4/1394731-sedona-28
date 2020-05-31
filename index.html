@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
@@ -7,24 +7,29 @@
     <link href="normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+
+  <body class="page-body">
 
      <header class="header">
        <nav class="header-navigation">
-        <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип города Седона"> 
+        <a class="header-logo">
+          <img class="logo" src="img/intro-welcome.svg" width="456" height="350" alt="Главный логотип Седона">
+        </a>
+       <div class="header-navigation-wrapper">
+        <div class="container">
+        <img class="logo-small" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип города Седона"> 
           <ul class="site-navigation">
            <li><a href="blank.html">Информация</a></li>
            <li><a href="blank.html">Фото и видео</a></li>
            <li><a href="blank.html">Карта штата</a></li>
            <li><a href="hotels.html">Гостиницы</a></li>
          </ul>
-       </nav>
-       <a>
-        <img class="logo" src="img/intro-welcome.svg" width="456" height="350" alt="Главный логотип Седона">
-       </a>
+        </div>
+       </div>  
+      </nav>
      </header>
 
-       <main class="container">
+       <main class="main-container">
          <h1 class="visually-hidden">Sedona</h1>
 
          <section class="intro">
@@ -55,7 +60,7 @@
               </figure>
             </li>
             <li>
-              <ul>
+              <ul class="features-list-first">
                 <li class="feature-item">
                   <img src="img/icon-1.svg" width="75" height="72" alt="Жилье"> 
                   <h3>Жилье</h3>
@@ -93,7 +98,8 @@
                 Да, по нему можно пройти! Если конечно вы осмелитесь
               </p>
             </li>
-            <li>
+           
+            <li >
               <h3>Небольшая площадь</h3>
               <span>
                 №3
@@ -102,7 +108,7 @@
                 Все достопримечательности находятся очень близко
               </p>
             </li>
-            <li>
+            <li >
               <h3>Красивая дорога</h3>
               <span>
                 №4
@@ -120,6 +126,7 @@
                 Большинство едет в Гранд Каньон и толпится там
               </p>
             </li>
+          
           </ul>
          </section> 
          </div>
@@ -139,18 +146,18 @@
           
        </main>
 
-    <footer>
+    <footer class="footer">
+      <div class="container">
       <section class="contacts">
-       <div class="contacts">
-        <h2>#visitsedona</h2>
+         <h2>#visitsedona</h2>
         <p class="phone-number">
           тел. +7(495) 666-01-66
         </p>
-        </div>
+        
       </section>
-      <section>
+      <section class="footer-social">
         <h2 class="visually-hidden">Давайте дружить</h2>
-        <ul class="social-list">
+        <ul >
           <li>
             <a class="button button-social" href="blank.html">
               <img src="img/twitter.svg" width="17" height="17" alt="Twitter">
@@ -168,12 +175,13 @@
           </li>
         </ul>
       </section>
-      <p class="developer">
+      <p class="footer-copyright">
         Website by
         <a href="https://htmlacademy.ru">
         <img class="logo-developer" src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">
         </a>
       </p>
+      </div>
     </footer>
 
     <section class="modal">
