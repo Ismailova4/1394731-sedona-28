@@ -15,8 +15,8 @@
         <a class="header-logo">
           <img class="logo" src="img/intro-welcome.svg" width="456" height="350" alt="Главный логотип Седона">
         </a>
-       <div class="header-navigation-wrapper">
-        <div class="container">
+      <div class="main-container"> 
+        <div class="header-navigation-wrapper">
         <img class="logo-small" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип города Седона"> 
           <ul class="site-navigation">
            <li><a href="blank.html">Информация</a></li>
@@ -31,10 +31,10 @@
 
        <main class="main-container">
          <h1 class="visually-hidden">Sedona</h1>
-
+        <!-- <img class="bg" src="../img/group.png" > -->
          <section class="intro">
            <h2 class="visually-hidden">Причины</h2>
-            <h3>Седона - небольшой городок в Аризоне, <br> 
+            <h3>Седона - небольшой городок в Аризоне, 
              заслуживающий большего!</h3>
             <p>
              Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
@@ -44,8 +44,9 @@
         <div class="wrapper">
         <section class="features">
           <h3 class="visually-hidden">Преимущества</h3>
-           <ul class="features-list"> 
-            <li>
+           
+          <ul class="features-list"> 
+            <li class="list-bg">
               <h3>Настоящий городок</h3>
               <span>
                 №1
@@ -59,8 +60,9 @@
                 <img src="img/cafe.jpg" width="800" height="256" alt="Кафе в Седоне"> 
               </figure>
             </li>
-            <li>
-              <ul class="features-list-first">
+           </ul>
+
+            <ul class="features-list-first">
                 <li class="feature-item">
                   <img src="img/icon-1.svg" width="75" height="72" alt="Жилье"> 
                   <h3>Жилье</h3>
@@ -82,14 +84,15 @@
                      Не только китайского, но и местного производства!
                   </p>
                 </li>
-              </ul>
-            </li>
+             </ul>
+            
+            <ul class="features-list">
             <li>
               <figure class="image">
                 <img src="img/canyon.jpg" width="800" height="256" alt="Каньон в Седоне">
               </figure>
             </li> 
-            <li>
+            <li class="list-bg">
               <h3>Там есть мост дъявола</h3>
               <span>
                 №2
@@ -98,8 +101,10 @@
                 Да, по нему можно пройти! Если конечно вы осмелитесь
               </p>
             </li>
-           
-            <li >
+           </ul>
+
+           <ul class="features-list-second">
+            <li>
               <h3>Небольшая площадь</h3>
               <span>
                 №3
@@ -108,7 +113,7 @@
                 Все достопримечательности находятся очень близко
               </p>
             </li>
-            <li >
+            <li>
               <h3>Красивая дорога</h3>
               <span>
                 №4
@@ -126,8 +131,8 @@
                 Большинство едет в Гранд Каньон и толпится там
               </p>
             </li>
-          
           </ul>
+
          </section> 
          </div>
 
@@ -148,7 +153,7 @@
 
     <footer class="footer">
       <div class="container">
-      <section class="contacts">
+      <section class="footer-contacts">
          <h2>#visitsedona</h2>
         <p class="phone-number">
           тел. +7(495) 666-01-66
@@ -157,24 +162,27 @@
       </section>
       <section class="footer-social">
         <h2 class="visually-hidden">Давайте дружить</h2>
-        <ul >
+        <div class="social">
+        <ul class="social-networks">
           <li>
-            <a class="button button-social" href="blank.html">
+            <a class="button button-social twitter" href="blank.html">
               <img src="img/twitter.svg" width="17" height="17" alt="Twitter">
             </a>
           </li>
           <li>
-            <a class="button button-social" href="blank.html">
+            <a class="button button-social facebook" href="blank.html">
               <img src="img/fb-icon.svg" width="12" height="22" alt="Facebook">
             </a>
           </li>
           <li>
-            <a class="button button-social" href="blank.html">
+            <a class="button button-social youtube" href="blank.html">
               <img src="img/youtube.svg" width="20" height="16" alt="YouTube">
             </a>
           </li>
         </ul>
+      </div>
       </section>
+
       <p class="footer-copyright">
         Website by
         <a href="https://htmlacademy.ru">

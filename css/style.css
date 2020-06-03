@@ -62,9 +62,8 @@ img {
   line-height: 26px;
   color: var(--basic-black);
   background-color: var(--basic-white);
-  background-image: url("../img/group.png"),
-                    url("../img/bg.jpg");               
-  background-position: bottom center, top center;
+  background-image: url("../img/bg.jpg");               
+  background-position: top center;
   background-repeat: no-repeat;
 
 }
@@ -326,16 +325,57 @@ img {
 }
 
 .features-list {
+  display: flex;
+  
 
   outline: 5px solid lightcoral;
   outline-offset: -5px;
+}
 
+.list-bg {
+  color: var(--basic-white);
+  background-color: var(--basic-neutral);
 }
 
 .feature-item {
   outline: 5px solid pink;
   outline-offset: -5px;
 
+}
+
+.header-navigation-wrapper {
+  display: flex;
+  
+} 
+
+.site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-height: 56px;
+  
+
+
+  outline: 5px solid red;
+  outline-offset: -10px;
+} 
+
+.site-navigation a {
+  color: var(--basic-black);
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
+
+.logo-small {
+  position: absolute;
+  
+  outline: 5px solid red;
+  outline-offset: -10px;
 }
 
 .footer {
@@ -347,11 +387,12 @@ img {
 }
 
 .footer .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.contacts {
+.footer-contacts {
   margin: 0;
   
   
@@ -360,10 +401,18 @@ img {
 }
 
 .footer-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 150px;
   justify-self: center;
   outline: 5px solid blue;
   outline-offset: -5px;
+}
+
+.footer-social ul {
+  margin: 0;
+  padding: 0;
 }
 
 .footer-copyright {
@@ -371,4 +420,41 @@ img {
 
   outline: 5px solid yellow;
   outline-offset: -5px;
+}
+
+.features-list {
+  margin: 0;
+  padding: 0;  
+}
+
+.features-list-first {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0;
+}
+
+.features-list-second {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--basic-extra-light);
+}
+
+.features-list-second h3 {
+  font-size: 21px;
+  line-height: 21px;
+
+}
+
+.image {
+  margin: 0;
+}
+
+.footer-copyright {
+  display: flex;
+  width: 260px;  
+  justify-content: space-around;
 }
