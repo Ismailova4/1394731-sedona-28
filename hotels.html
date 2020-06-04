@@ -11,10 +11,7 @@
 
     <header class="header">
       <nav class="header-navigation">
-       <a class="header-logo">
-         <img class="logo" src="img/intro-welcome.svg" width="456" height="350" alt="Главный логотип Седона">
-       </a>
-     <div class="main-container"> 
+      <div class="main-container"> 
        <div class="header-navigation-wrapper">
         <img class="logo-small" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип города Седона"> 
          <ul class="site-navigation">
@@ -74,9 +71,40 @@
               </li>
             </ul>
           </fieldset class="group"> 
-           <div class="range-slider">
+
+          <fieldset class="filter">
+            <legend>Стоимость в сутки (р):</legend>
+            <!--<span>
+              От 0                           
+            </span>
+            <span>
+              До 3000
+            </span> -->
+           <div class="range-filter">
+             <div class="range-controls">
+               <div class="scale">
+                 <div class="bar"></div>
+               </div>  
+               <div class="toggle toggle-min"></div>
+               <div class="toggle toggle-max"></div>
+             </div>
+             <div class="price-control">
+              <label class="min-price">
+                от <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                до <input type="number" name="max-price" value="3000">
+              </label>
+             </div>
+           </div>
+
+          </fieldset>
+
+
+
+           <!--<div class="range-slider">
               <h2 class="features">Стоимость в сутки (р):</h2>
-             <div class="price"><!--оборачиваю в div для создания рамки вокруг span'ов-->  
+             <div class="price">
               <span>
                  От 0                           
                </span>
@@ -112,17 +140,19 @@
             <input class="up" type="image" src="img/icon-up-dir.svg">
             <input class="down" type="image" src="img/icon-down-dir.svg">
             </p>
-         </div>
+         </div> -->
+
          </form>
 
        </section>
        
-       <section class="hotels">
+       <section class="page-catalog hotels">
          <h2 class="visually-hidden">Подборка отелей</h2>
          <ul class="hotels-list">
+
            <li>
               <h2>Amara Resort & Spa</h2>
-              <div>
+              <div class="hotel-image">
                 <img src="img/amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
               </div>
               <p>
@@ -137,17 +167,20 @@
                   Забронировать
                 </button>
               </p>
-              <div>
+              <div class="rating">
+               <div>
                 <img src="img/star.svg" width="19" height="17">
                 <img src="img/star.svg" width="19" height="17">
                 <img src="img/star.svg" width="19" height="17">
                 <img src="img/star.svg" width="19" height="17">
-              </div>
+               </div>
               <p>Рейтинг: 8,5</p>
+              </div>
            </li>
+
            <li>
             <h2>Desert Quail Inn</h2>
-            <div>
+            <div class="hotel-image">
               <img src="img/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
             </div>
             <p>
@@ -162,16 +195,19 @@
                 Забронировать
               </button>
             </p>
-            <div>
+            <div class="rating">
+             <div>
               <img src="img/star.svg" width="19" height="17">
               <img src="img/star.svg" width="19" height="17">
               <img src="img/star.svg" width="19" height="17">
+             </div>
+             <p>Рейтинг: 8,9</p>
             </div>
-            <p>Рейтинг: 8,9</p>
            </li>
+
            <li>
             <h2>Villas at Poco Diablo</h2>
-            <div>
+            <div class="hotel-image">
               <img src="img/villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
             </div>
             <p>
@@ -186,11 +222,13 @@
                 Забронировать
               </button>
             </p>
+            <div class="rating">
             <div>
               <img src="img/star.svg" width="19" height="17">
               <img src="img/star.svg" width="19" height="17">
             </div>
             <p>Рейтинг: 9,2</p>
+            </div>
            </li>
          </ul>  
        </section>

@@ -457,3 +457,57 @@ img {
   color: var(--basic-black);
   opacity: 0.3;
 }
+
+/* range-slider */
+
+.filter {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  
+}
+
+.range-filter {
+  width: 302px;
+  margin-top: 20px;
+}
+
+.filter legend {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+ }
+
+ .range-controls {
+  position: relative; 
+  height: 80px;
+  padding-top: 39px;
+  border-radius: 5px;
+  margin-bottom: 23px;
+ }
+
+ .range-controls .scale {
+   height: 2px;
+   background-color: var(--basic-black);
+   mix-blend-mode: normal;
+   opacity: 0.3;
+ }
+
+ .range-controls .bar {
+   width: 248px;
+   height: 2px;
+   background: var(--basic-neutral);
+ }
+
+ .range-controls .toggle {
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: #ababab;
+  border: 8px solid var(--basic-neutral);
+  background-color: #ababab;
+}
