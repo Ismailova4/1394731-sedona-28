@@ -43,7 +43,7 @@ a {
 
 img {
   max-width: 100%;
-  height: auto;
+ /* height: auto;*/
 }
 
 .visually-hidden {
@@ -92,7 +92,7 @@ img {
   outline: none;
 }
 
- .button-hotel {
+.button-hotel {
   font-size: 14px;
   font-style: normal;
 }
@@ -196,12 +196,20 @@ img {
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
-  min-height: 55px;
+  min-height: 56px;
   color: var(--basic-black);
   background-color: var(--basic-white);
   background-image: url("../img/bg.jpg");               
   background-position: top center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
+  position: relative;
+  width: 1200px;
+  height: 565px;
+}
+
+.mask {
+  position: absolute;
+  top: 452px;
 }
 
 .header-navigation {
@@ -210,7 +218,7 @@ img {
   align-items: center; 
 }
 
-.header-logo {
+.header-image {
   position: relative;
   width: 456px;
   height: 350px;
@@ -219,15 +227,18 @@ img {
 
 .menu-left {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 325px;
   list-style: none;
+  padding-right: 130px;
 }
 
 .menu-right {
   display: flex;
   justify-content: space-between;
+  width: 325px;
   list-style: none;
+  padding-left: 130px;
 }
 
 .header-navigation-wrapper {
@@ -238,7 +249,7 @@ img {
   background-color: var(--basic-white);
 }
 
-.logo-small {
+.logo {
   position: absolute;
 } 
   
@@ -250,7 +261,8 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
-  min-height: 56px;
+  height: 56px;
+  background-color: var(--basic-white);
 } 
 
 .site-navigation a {
@@ -273,21 +285,17 @@ img {
   color: var(--basic-dark);
 }
 
-/*
-
-.mask {
-  position: relative;
-  top: 470px;
-  right: 40px;
+.booking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 290px;
 }
 
-.bg {
-  position: relative;
-  left: 40px;
-  top: 55px;
-} 
-
-*/
+.sedona-info {
+  text-align: center;
+}
 
 /* footer */
 
@@ -310,25 +318,17 @@ img {
   margin: 0;
 }
 
-.footer-social {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-self: center;
-}
-
-.footer-social ul {
-  list-style: none;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.social-networks {
+.social {
   display: flex;
   width: 150px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.background {
+  width: 46px;
+  height: 48px;
+  fill: var(--basic-neutral);
 }
 
 .footer-phone-number {
@@ -351,6 +351,10 @@ img {
 /* main */
 
 .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   line-height: 26px;
 }
@@ -377,8 +381,10 @@ img {
 
 .features-list-first {
   display: grid;
+  min-height: 330px;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 0;
+  align-items: center;
 }
 
 .list-bg {
@@ -386,16 +392,17 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 256px;
+  max-height: 256px;
   color: var(--basic-white);
   background-color: var(--basic-neutral);
 }
 
 .features-list-second {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  flex-wrap: wrap;
+  column-gap: 170px;
+  
   min-height: 256px;
   list-style: none;
   margin: 0;
@@ -408,6 +415,10 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.features-list-second p {
+  text-align: center;
 }
 
 .features-list-second h3 {
@@ -463,9 +474,7 @@ img {
 .filter {
   margin: 0;
   padding: 0;
-  border: none;
-
-  
+  border: none;  
 }
 
 .range-filter {
@@ -503,6 +512,9 @@ img {
  }
 
  .range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
   width: 4px;
   height: 4px;
   padding: 0;
@@ -510,4 +522,33 @@ img {
   box-shadow: #ababab;
   border: 8px solid var(--basic-neutral);
   background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 0;
+}
+
+.range-controls .toggle-max {
+  left: 248px;
+}
+
+.price-control label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--basic-extra-dark); /* поменять */
+}
+
+.price-control input {
+  font-size: inherit;
+  width: 159px;
+  height: 36px;
+  text-align: center;
+  color: var(--basic-extra-dark);/* поменять */
+}
+
+.price-control {
+  display: flex;
+  justify-content: space-between;
 }
