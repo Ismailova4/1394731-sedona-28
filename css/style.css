@@ -192,7 +192,7 @@ img {
 
 /* header */
 
-.header {
+.header-main {
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
@@ -439,11 +439,17 @@ img {
   position: relative;
   top: 130px;
 }
+
 /* hotels.html */
 
-.hotels-list {
+.hotels-list ul {
   list-style: none;
- }
+}
+
+.hotels-list li {
+  display: flex;
+  flex-direction: row;
+} 
 
 .up,
 .down {
@@ -467,6 +473,12 @@ img {
 .hotels h2:active {
   color: var(--basic-black);
   opacity: 0.3;
+}
+
+.bg-hotels {
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  /*filter: blur(5px);*/
 }
 
 /* range-slider */

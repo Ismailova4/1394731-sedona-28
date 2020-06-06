@@ -10,24 +10,22 @@
   <body class="page-body">
 
     <header class="header">
-      <nav class="header-navigation">
-      <div class="main-container"> 
-       <div class="header-navigation-wrapper">
-        <img class="logo-small" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип города Седона"> 
-         <ul class="site-navigation">
-           <ul class="menu-left">
-           <li><a href="blank.html">Информация</a></li>
-           <li><a href="blank.html">Фото и видео</a></li>
-           </ul>
-           <ul class="menu-right">
-           <li><a href="blank.html">Карта штата</a></li>
-           <li><a href="hotels.html">Гостиницы</a></li>
-           </ul>
+        
+      <div class="main-container">              
+        <nav class="header-navigation">
+          <img class="logo" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип города Седона"> 
+          <ul class="site-navigation">
+            <ul class="menu-left">
+            <li><a href="blank.html">Информация</a></li>
+            <li><a href="blank.html">Фото и видео</a></li>
           </ul>
-        </div>
-      </div>  
-     </nav>
-    </header>
+          <ul class="menu-right">
+            <li><a href="blank.html">Карта штата</a></li>
+            <li><a href="hotels.html">Гостиницы</a></li>
+          </ul>
+         </ul>
+       </nav>
+      </div> 
 
 
      <main class="container">
@@ -74,13 +72,7 @@
 
           <fieldset class="filter">
             <legend>Стоимость в сутки (р):</legend>
-            <!--<span>
-              От 0                           
-            </span>
-            <span>
-              До 3000
-            </span> -->
-           <div class="range-filter">
+            <div class="range-filter">
              <div class="range-controls">
                <div class="scale">
                  <div class="bar"></div>
@@ -99,49 +91,7 @@
            </div>
 
           </fieldset>
-
-
-
-           <!--<div class="range-slider">
-              <h2 class="features">Стоимость в сутки (р):</h2>
-             <div class="price">
-              <span>
-                 От 0                           
-               </span>
-               <span>
-                 До 3000
-               </span>
-             </div> 
-            <div class="range-group">
-             <input type="range" id="min-price" value="0" min="0" max="3000" step="100">  
-             <input type="range" id="max-price" value="0" min="0" max="3000" step="100">  
-            </div>
-            </div>
-           <button type="submit">Показать</button>
-           <div class="output">
-           <p>
-             Найдено:3
-           </p> 
-            <fieldset class="group"> 
-              <legend>Сортировка:</legend> 
-              <ul class="sort">
-                <li>
-                  по цене    
-                </li>
-                <li>
-                  по типу   
-                </li>
-                <li>
-                  по рейтингу  
-                </li>
-              </ul>
-            </fieldset>
-            <p class="buttons">
-            <input class="up" type="image" src="img/icon-up-dir.svg">
-            <input class="down" type="image" src="img/icon-down-dir.svg">
-            </p>
-         </div> -->
-
+                    
          </form>
 
        </section>
@@ -151,85 +101,125 @@
          <ul class="hotels-list">
 
            <li>
-              <h2>Amara Resort & Spa</h2>
               <div class="hotel-image">
                 <img src="img/amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
               </div>
-              <p>
+
+              
+             <div class="hotel-info-wrapper">
+              <h2>Amara Resort & Spa</h2>
+              <div class="hotel-type">
+                <span>
                 Гостиница
+                </span> 
                 <span>
                   от 4000 р.
                 </span>
+              </div>
+            
+              <div class="buttons">
                 <button class="button button-hotel" type="button">
                   Подробнее
                 </button>
                 <button class="button button-booking" type="button">
                   Забронировать
                 </button>
-              </p>
+              </div>
+
+             </div>
+
               <div class="rating">
                <div>
                 <img src="img/star.svg" width="19" height="17">
                 <img src="img/star.svg" width="19" height="17">
                 <img src="img/star.svg" width="19" height="17">
                 <img src="img/star.svg" width="19" height="17">
-               </div>
-              <p>Рейтинг: 8,5</p>
               </div>
+               <p>
+                 Рейтинг: 8,5
+               </p>
+              </div>
+
            </li>
 
-           <li>
-            <h2>Desert Quail Inn</h2>
+          <li>
+                  
             <div class="hotel-image">
               <img src="img/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
             </div>
-            <p>
-              Мотель
+        
+            <div class="hotel-info-wrapper">  
+            <h2>Desert Quail Inn</h2>
+            <div class="hotel-type">
               <span>
-                от 3000 р.
+               Мотель
               </span>
+              <span>
+               от 3000 р.
+              </span>
+            </div>
+
+            <div class="buttons">
               <button class="button button-hotel" type="button">
                 Подробнее
               </button>
               <button class="button button-booking" type="button">
                 Забронировать
               </button>
-            </p>
+            </div>
+          </div>
+
             <div class="rating">
              <div>
               <img src="img/star.svg" width="19" height="17">
               <img src="img/star.svg" width="19" height="17">
               <img src="img/star.svg" width="19" height="17">
              </div>
-             <p>Рейтинг: 8,9</p>
+             <p>
+               Рейтинг: 8,9
+             </p>
             </div>
-           </li>
 
-           <li>
-            <h2>Villas at Poco Diablo</h2>
+          </li>
+
+          <li>
+            
             <div class="hotel-image">
               <img src="img/villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
             </div>
-            <p>
-              Апартменты
+
+            <div class="hotel-info-wrapper">
+            <h2>Villas at Poco Diablo</h2>
+            <div class="hotel-type">
+              <span>
+               Апартменты
+              </span>
               <span>
                 от 2000 р.
               </span>
+            </div>
+
+            <div class="buttons">
               <button class="button button-hotel" type="button">
                 Подробнее
               </button>
               <button class="button button-booking" type="button">
                 Забронировать
               </button>
-            </p>
-            <div class="rating">
-            <div>
+            </div>
+          </div>
+
+          <div class="rating">
+             <div>
               <img src="img/star.svg" width="19" height="17">
               <img src="img/star.svg" width="19" height="17">
-            </div>
-            <p>Рейтинг: 9,2</p>
-            </div>
-           </li>
+             </div>
+             <p>
+               Рейтинг: 9,2
+             </p>
+         </div>
+
+          </li>
          </ul>  
        </section>
      </main>
