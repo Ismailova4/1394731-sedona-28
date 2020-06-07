@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Отели Седоны</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="normalize.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
@@ -34,7 +34,7 @@
        <section>
          <h2 class="visually-hidden">Фильтр отелей</h2>
 
-         <form action="https://echo.htmlacademy.ru" method="get"> 
+         <form class="form" action="https://echo.htmlacademy.ru" method="get"> 
           <fieldset class="group">
             <legend class="features">Инфраструктура:</legend>
             <ul class="facilities">
@@ -68,26 +68,30 @@
                 <label for="apartments">Апартменты</label>
               </li>
             </ul>
-          </fieldset class="group"> 
+          </fieldset> 
 
           <fieldset class="filter">
             <legend>Стоимость в сутки (р):</legend>
             <div class="range-filter">
+
+              <div class="price-control">
+                <label class="min-price">от</label>
+                <input type="number" name="min-price" value="0">
+                
+                <label class="max-price">до</label>
+                <input type="number" name="max-price" value="3000">
+                
+               </div>
+
              <div class="range-controls">
                <div class="scale">
                  <div class="bar"></div>
                </div>  
                <div class="toggle toggle-min"></div>
                <div class="toggle toggle-max"></div>
+               <button class="button-show" type="button">Показать</button>
              </div>
-             <div class="price-control">
-              <label class="min-price">от</label>
-              <input type="number" name="min-price" value="0">
               
-              <label class="max-price">до</label>
-              <input type="number" name="max-price" value="3000">
-              
-             </div>
            </div>
 
           </fieldset>
@@ -98,9 +102,32 @@
        
        <section class="page-catalog hotels">
          <h2 class="visually-hidden">Подборка отелей</h2>
+         
+         <div class="output">
+           <p class="found">
+             Найдено: 3
+           </p>
+           <fieldset class="sort-by">
+             <legend>Сортировка:</legend>
+              <ul class="by">
+                <li class="price">по цене</li>
+                <li>по типу</li>
+                <li>по рейтингу</li>
+              </ul> 
+           </fieldset>
+           <div>
+             <button class="up-down" type="button">
+              <img src="img/icon-up-dir.svg" width="11" height="10"> 
+             </button>
+             <button type="button">
+             <img src="img/icon-down-dir.svg" width="11" height="10">
+             </button>
+           </div>
+         </div>  
+
          <ul class="hotels-list">
 
-           <li>
+           <li class="hotel-intro">
               <div class="hotel-image">
                 <img src="img/amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
               </div>
@@ -142,7 +169,7 @@
 
            </li>
 
-          <li>
+          <li class="hotel-intro">
                   
             <div class="hotel-image">
               <img src="img/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
@@ -182,13 +209,14 @@
 
           </li>
 
-          <li>
+          <li class="hotel-intro">
             
             <div class="hotel-image">
               <img src="img/villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
             </div>
 
             <div class="hotel-info-wrapper">
+
             <h2>Villas at Poco Diablo</h2>
             <div class="hotel-type">
               <span>
@@ -207,6 +235,7 @@
                 Забронировать
               </button>
             </div>
+
           </div>
 
           <div class="rating">

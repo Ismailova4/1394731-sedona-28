@@ -163,9 +163,9 @@ img {
   background-repeat: no-repeat;
 }
 
-.modal {
+/* .modal {
   display: none;
-}
+} */
 
 /* Grid */
 
@@ -178,6 +178,7 @@ img {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  justify-content: center;
 }
 
 .container {
@@ -223,6 +224,10 @@ img {
   width: 456px;
   height: 350px;
   order: 2;
+}
+
+ul .menu-left {
+  padding-left: 0;
 }
 
 .menu-left {
@@ -442,28 +447,97 @@ img {
 
 /* hotels.html */
 
-.hotels-list ul {
+.header {
+  font-weight: bold;
+  line-height: 26px;
+  height: 56px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--basic-white);
+  background-image: url("../img/bg.jpg");
+}
+
+.hotels-list  {
   list-style: none;
 }
 
-.hotels-list li {
+.hotels-list .hotel-intro {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 } 
 
-.up,
-.down {
+.hotel-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* output */
+
+.output {
+  display: flex;
+  justify-content: space-between;
+}
+
+.found {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.sort-by {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--basic-black);
+  border: none;
+}
+
+.sort-by .by {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.by li:not(.price) {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--basic-neutral);
+  opacity: 0.3;
+}
+
+.by .price {
+  color: var(--basic-neutral);
+}
+
+.up-down {
   outline: none;
+
 }
 
 .group {
   border: none;
 }
 
+.group legend {
+  font-weight: bold;
+}
+
 .facilities,
 .accomodation,
 .sort {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .hotels h2:hover {
@@ -498,7 +572,7 @@ img {
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
-  color: var(--basic-black);
+  color: var(--basic-white);
   text-transform: uppercase;
  }
 
@@ -512,7 +586,7 @@ img {
 
  .range-controls .scale {
    height: 2px;
-   background-color: var(--basic-black);
+   background-color: var(--basic-white);
    mix-blend-mode: normal;
    opacity: 0.3;
  }
@@ -520,7 +594,7 @@ img {
  .range-controls .bar {
    width: 248px;
    height: 2px;
-   background: var(--basic-neutral);
+   background: var(--basic-white);
  }
 
  .range-controls .toggle {
@@ -532,7 +606,7 @@ img {
   padding: 0;
   border-radius: 50%;
   box-shadow: #ababab;
-  border: 8px solid var(--basic-neutral);
+  border: 8px solid var(--basic-white);
   background-color: #ababab;
   box-shadow: 0 2px 1px 0 #cfcfcf;
   cursor: pointer;
@@ -549,7 +623,7 @@ img {
 .price-control label {
   font-size: 14px;
   text-transform: uppercase;
-  color: var(--basic-extra-dark); /* поменять */
+  color: var(--basic-white); 
 }
 
 .price-control input {
@@ -557,10 +631,39 @@ img {
   width: 159px;
   height: 36px;
   text-align: center;
-  color: var(--basic-extra-dark);/* поменять */
+  color: var(--basic-white);
+  background-color: transparent;
+  border: none;
+}
+
+.price-control input[type="number"]:focus {
+  outline: none;  
 }
 
 .price-control {
   display: flex;
   justify-content: space-between;
+  border: 2px solid var(--basic-white);
 }
+
+.button-show {
+  font-family: inherit;
+  text-transform: inherit;
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 21px;
+  background-color: transparent;
+  border: 2px solid var(--basic-white);
+  cursor: pointer;
+  padding: 7px 36px 8px 35px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
