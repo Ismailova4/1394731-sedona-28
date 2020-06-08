@@ -208,7 +208,7 @@ img {
 
 .mask {
   position: absolute;
-  top: 452px;
+  top: 453px;
 }
 
 .header-navigation {
@@ -219,10 +219,10 @@ img {
 
 .header-image {
   position: relative;
+  align-content: center;
   width: 456px;
   height: 350px;
-  order: 2;
-}
+} 
 
 ul .menu-left {
   padding-left: 0;
@@ -329,6 +329,9 @@ ul .menu-left {
 }
 
 .background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 46px;
   height: 48px;
   fill: var(--basic-neutral);
@@ -358,6 +361,7 @@ ul .menu-left {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 216px;
   text-align: center;
   line-height: 26px;
 }
@@ -434,10 +438,6 @@ ul .menu-left {
   padding: 0;
 }
 
-.mask {
-  background-position: center;
-}
-
 .map {
   position: relative;
   top: 130px;
@@ -460,12 +460,6 @@ ul .menu-left {
   background-image: url("../img/bg.jpg");
 }
 
-.group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .hotels-list  {
   display: flex;
   flex-direction: column;
@@ -474,6 +468,11 @@ ul .menu-left {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.hotel-wrap {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .hotels-list .hotel-intro {
@@ -486,7 +485,15 @@ ul .menu-left {
   display: flex;
   flex-direction: column;
   width: 256px;
-  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+.hotel-info-wrapper h2 {
+  margin: 0;
+}
+
+.hotel-image {
+  padding-right: 30px;
 }
 
 /* output */
