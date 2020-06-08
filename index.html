@@ -201,14 +201,16 @@
     <section class="modal">
       <button class="button button-booking" type="button">Поиск гостиницы в Седоне</button>
        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
+       <div class="modal-inner">
+        <p class="date">
          <label for="checkin-date">Дата заезда:</label>                  
          <input class="checkin-date" id="checkin-date" type="text" name="date" placeholder="01.01.2020">     
        </p>
-       <p>
+       <p class="date">
          <label for="checkout-date">Дата выезда:</label>                  
          <input class="checkout-date" id="checkout-date" type="text" name="date" placeholder="01.01.2020">     
        </p>
+       <div class="amount">
        <p>
          <label for="adults">Взрослые:</label>                  
          <input class="adults" id="adults" type="number" name="adults" >     
@@ -217,7 +219,9 @@
          <label for="childs">Дети:</label>                  
          <input class="childs" id="childs" type="number" name="childs" >     
        </p>
+       </div>
        <button class="button button-search" type="submit">Найти</button>
+      </div>
       </form>  
       </section>
     
