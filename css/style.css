@@ -130,6 +130,7 @@ img {
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
   line-height: 26px;
+  width: 568px;
 }
 
 .search-form {
@@ -492,7 +493,6 @@ ul .menu-left {
 
 .map {
   position: relative;
-  top: 130px;
 }
 
 /* hotels.html */
@@ -567,17 +567,18 @@ ul .menu-left {
 
 .sort-by {
   display: flex;
+  justify-content: space-between;
   width: 350px;
   font-size: 12px;
   line-height: 18px;
   padding: 0;
   color: var(--basic-black);
-  border: none;
 }
 
 .sort-by .by {
   display: flex;
   justify-content: space-between;
+  width: 240px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -612,6 +613,18 @@ ul .menu-left {
 
 .group legend {
   font-weight: bold;
+}
+
+.group input[type="checkbox"] {
+  
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+.facilities {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .facilities,

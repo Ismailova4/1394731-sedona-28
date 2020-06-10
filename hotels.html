@@ -35,8 +35,8 @@
          <h2 class="visually-hidden">Фильтр отелей</h2>
 
          <form class="form" action="https://echo.htmlacademy.ru" method="get"> 
-          <fieldset class="group">
-            <legend class="features">Инфраструктура:</legend>
+          <div class="group">
+            <h2 class="features">Инфраструктура:</h2>
             <ul class="facilities">
               <li>
                <input type="checkbox" id="pool" name="pool" checked> 
@@ -51,9 +51,9 @@
                <label for="wi-fi">Wi-fi</label>
               </li>
             </ul>
-          </fieldset>  
-          <fieldset class="group">
-           <legend class="features">Тип жилья:</legend>
+          </div> 
+          <div class="group">
+           <h2 class="features">Тип жилья:</h2>
             <ul class="accomodation"> 
               <li>
                 <input type="checkbox" id="hotel" name="hotel" checked>
@@ -68,7 +68,7 @@
                 <label for="apartments">Апартменты</label>
               </li>
             </ul>
-          </fieldset> 
+          </div> 
 
           <fieldset class="filter">
             <legend>Стоимость в сутки (р):</legend>
@@ -105,14 +105,14 @@
            <p class="found">
              Найдено: 3
            </p>
-           <fieldset class="sort-by">
-             <legend>Сортировка:</legend>
+           <div class="sort-by">
+             <span>Сортировка:</span>
               <ul class="by">
                 <li class="price">по цене</li>
                 <li>по типу</li>
                 <li>по рейтингу</li>
               </ul> 
-           </fieldset>
+            </div>
            <div>
              <button class="up-down" type="button">
               <img src="img/icon-up-dir.svg" width="11" height="10"> 
