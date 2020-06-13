@@ -13,7 +13,9 @@
         
       <div class="container">              
         <nav class="header-navigation">
+          <a href="index.html">
           <img class="logo" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип города Седона"> 
+          </a>
           <ul class="site-navigation">
             <ul class="menu-left">
             <li><a href="blank.html">Информация</a></li>
@@ -66,7 +68,7 @@
               </li>
               <li>
                 <input type="checkbox" id="apartments" name="apartments" checked>    
-                <label for="apartments">Апартменты</label>
+                <label for="apartments">Апартаменты</label>
               </li>
             </ul>
           </div> 
@@ -77,7 +79,7 @@
 
               <div class="price-control">
                 <label class="min-price">от
-                  <input type="number" name="min-price" value="0">
+                  <input class="min" type="number" name="min-price" value="0">
                 </label>
                 
                 
@@ -125,12 +127,16 @@
           </div>
            <div>
              <button class="up-down" type="button">
-              <img src="img/icon-up-dir.svg" width="11" height="10"> 
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+              </svg>              
              </button>
              <button class="up-down" type="button">
-             <img src="img/icon-down-dir.svg" width="11" height="10">
-             </button>
-           </div>
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
+              </svg>
+             </button> 
+             </div>
          </div>  
 
          <ul class="hotels-list">
