@@ -16,8 +16,7 @@
   --special: #f2f2f2;
 }
 
-body,
-html {
+body {
   min-width: 1200px;
   margin: 0;
   padding: 0;
@@ -125,7 +124,12 @@ img {
 
 /* Modal */
 
-.modal {
+.modal-close {
+  display: none;
+}
+
+.modal-show {
+  display: block;
   font-weight: bold;
   color: var(--basic-black);
   background-color: var(--basic-white);
@@ -364,8 +368,10 @@ ul .menu-left {
 
 .footer .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  height: 120px;
+  padding: 0;
 }
 
 .footer-contacts {
@@ -374,6 +380,19 @@ ul .menu-left {
   justify-content: center;
   align-items: center;
   margin: 0;
+  width: 251px;
+}
+
+.footer-contacts h2 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-contacts p {
+  margin: 0;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
 }
 
 .social {
@@ -390,12 +409,6 @@ ul .menu-left {
   width: 46px;
   height: 48px;
   fill: var(--basic-neutral);
-}
-
-.footer-phone-number {
-  font-size: 21px;  
-  line-height: 26px;
-  font-weight: bold;
 }
 
 .footer-copyright {
@@ -434,6 +447,20 @@ ul .menu-left {
   text-align: center;
 }
 
+.order-number {
+  
+  outline: 1px solid red;
+}
+
+.order-number::before,
+.order-number::after {
+  content: "";
+  flex-grow: 1;
+  flex-shrink: 0;
+  height: 1px;
+  background: var(--basic-black);
+}
+
 .features-list {
   display: flex;
   list-style: none;
@@ -447,6 +474,11 @@ ul .menu-left {
   grid-template-columns: 1fr 1fr 1fr;
   padding: 0;
   align-items: center;
+  margin: 0;
+}
+
+.background-list {
+  background-color: var(--basic-extra-light);
 }
 
 .list-bg {
@@ -454,17 +486,17 @@ ul .menu-left {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 400px;
   max-height: 256px;
   color: var(--basic-white);
   background-color: var(--basic-neutral);
 }
 
 .features-list-second {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  column-gap: 170px;
-  
+
   min-height: 256px;
   list-style: none;
   margin: 0;
@@ -475,8 +507,9 @@ ul .menu-left {
 .features-list-second li {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  height: 150px;
 }
 
 .features-list-second p {
@@ -505,18 +538,28 @@ ul .menu-left {
   height: 56px;
 }
 
+.form-container::before {
+  content:"";
+  position: absolute; 
+  left: 0; right: 0; top: 0; bottom: 0;
+  z-index: -1;
+  /*width: 1200px;*/
+  background-image: url("../img/bg.jpg");
+  background-position: 50% -55%;
+  background-repeat: no-repeat;
+  filter: blur(10px);
+}
+
 .form {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 217px;
   font-size: 16px;
   line-height: 21px;
   color: var(--basic-white);
-  background-image: url("../img/bg.jpg");
-  background-position: 50% 85%;
+  
 }
-
-
 
 .hotels-list  {
   display: flex;
@@ -524,7 +567,7 @@ ul .menu-left {
   justify-content: space-between;
   height: 452px;
   margin: 0;
-  padding: 0;
+  padding: 30px 0;
   list-style: none;
 }
 
@@ -562,6 +605,13 @@ ul .menu-left {
   justify-content: space-between;
   align-items: center;
   height: 87px;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 517px;
 }
 
 .found {
@@ -610,26 +660,47 @@ ul .menu-left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 157px;
+  font-size: 14px;
+  height: 160px;
   padding: 0;
   margin: 0;
   border: none;
 }
 
-.group legend {
-  font-weight: bold;
+.group h2 {
+  font-size: 16px;
+  margin: 0;
 }
 
 .group input[type="checkbox"] {
-  
-  background-image: url("../img/checkbox-off.svg");
-  background-repeat: no-repeat;
+  display: none;
 }
 
-.facilities {
+input[type=checkbox] + label:before {
+  content: "\2713";
+  color: transparent;
+  display: inline-block;
+  border: 1px solid var(--basic-white);
+  font-size: 20px;    
+  line-height: 22px;
+  margin: -5px 5px 0 0;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  transition: color ease .3s;
+}
+
+input[type=checkbox]:checked + label:before {
+  color: var(--basic-white);
+}
+
+.facilities,
+.accomodation {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 120px;
 }
 
 .facilities,
@@ -652,7 +723,12 @@ ul .menu-left {
 .bg-hotels {
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
-  /*filter: blur(5px);*/
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .rating-range {
@@ -669,6 +745,8 @@ ul .menu-left {
 
 .filter {
   display: flex;
+  flex-direction: column;
+  height: 160px;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -681,6 +759,7 @@ ul .menu-left {
   flex-direction: column;
   justify-content: space-between;
   width: 302px;
+  height: 127px;
 }
 
 .filter legend {
@@ -689,12 +768,13 @@ ul .menu-left {
   line-height: 21px;
   color: var(--basic-white);
   text-transform: uppercase;
+  padding-bottom: 3px;
  }
 
  .range-controls {
   position: relative; 
-  height: 80px;
-  padding-top: 39px;
+  height: 55px;
+  padding-top: 20px;
   border-radius: 5px;
  }
 
@@ -703,6 +783,7 @@ ul .menu-left {
    background-color: var(--basic-white);
    mix-blend-mode: normal;
    opacity: 0.3;
+   width: 305px;
  }
 
  .range-controls .bar {
@@ -713,7 +794,7 @@ ul .menu-left {
 
  .range-controls .toggle {
   position: absolute;
-  top: 31px;
+  top: 12px;
   left: 0;
   width: 4px;
   height: 4px;
@@ -757,7 +838,25 @@ ul .menu-left {
 .price-control {
   display: flex;
   justify-content: space-between;
+  width: 317px;
+  height: 36px;
   border: 2px solid var(--basic-white);
+}
+
+.price-control label {
+  text-align: center;
+}
+
+.min-price {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.max-price {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .button-show {
@@ -773,6 +872,12 @@ ul .menu-left {
   border: 2px solid var(--basic-white);
   cursor: pointer;
   padding: 7px 36px 8px 35px;
+}
+
+.button-show-result {
+  display: flex;
+  width: 317px;
+  justify-content: center;
 }
 
 input::-webkit-outer-spin-button,

@@ -31,15 +31,16 @@
      <main class="container">
        <h1 class="visually-hidden">Отели</h1>
       
+      <div class="form-container">     
        <section>
          <h2 class="visually-hidden">Фильтр отелей</h2>
 
          <form class="form" action="https://echo.htmlacademy.ru" method="get"> 
-          <div class="group">
+           <div class="group">
             <h2 class="features">Инфраструктура:</h2>
             <ul class="facilities">
               <li>
-               <input type="checkbox" id="pool" name="pool" checked> 
+               <input class="checkbox-checked" type="checkbox" id="pool" name="pool" checked> 
                <label for="pool">Бассейн</label>
               </li>
               <li>
@@ -93,19 +94,23 @@
                </div>  
                <div class="toggle toggle-min"></div>
                <div class="toggle toggle-max"></div>
+               </div>
+              <div class="button-show-result">
+              <button class="button-show" type="button">Показать</button>
+              </div>
              </div>
-           </div>
-           <button class="button-show" type="button">Показать</button>
-          </fieldset>
-                    
+           
+          </fieldset>                
          </form>
 
        </section>
-       
+      </div> 
+
        <section class="page-catalog hotels">
          <h2 class="visually-hidden">Подборка отелей</h2>
          
          <div class="output">
+           <div class="result">
            <p class="found">
              Найдено: 3
            </p>
@@ -117,6 +122,7 @@
                 <li>по рейтингу</li>
               </ul> 
             </div>
+          </div>
            <div>
              <button class="up-down" type="button">
               <img src="img/icon-up-dir.svg" width="11" height="10"> 
