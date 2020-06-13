@@ -124,6 +124,14 @@ img {
 
 /* Modal */
 
+.modal-login {
+  top: 120px;
+  bottom: auto;
+  width: 568px;
+  padding: 50px 80px;
+}
+
+
 .modal-close {
   display: none;
 }
@@ -179,6 +187,7 @@ img {
 .amount {
   display: flex;
   justify-content: space-between;
+  width: 458px;
 }
 
 .search-form input[type="text"] {
@@ -219,6 +228,22 @@ img {
   background-image: url("../img/calendar.svg");
   background-position: right;
   background-repeat: no-repeat;
+}
+
+.adults-amount {
+  display: flex;
+  width: 225px;
+  justify-content: space-between;
+}
+
+.childs-amount {
+  display: flex;
+  width: 225px;
+  justify-content: flex-end;
+}
+
+.amount .childs {
+  padding-right: 40px;
 }
 
 /* .modal {
@@ -278,7 +303,7 @@ img {
 .header-image {
   position: relative;
   align-content: center;
-  margin-top: 50px;
+  margin-top: 40px;
   width: 456px;
   height: 350px;
 } 
@@ -447,19 +472,28 @@ ul .menu-left {
   text-align: center;
 }
 
-.order-number {
-  
-  outline: 1px solid red;
+.order-number-w,
+.order-number-b {
+  display: flex;
+  align-items: center;
 }
 
-.order-number::before,
-.order-number::after {
+.order-number-w::before,
+.order-number-w::after {
   content: "";
-  flex-grow: 1;
-  flex-shrink: 0;
+  width: 10px;
+  height: 1px;
+  background: var(--basic-white);
+}
+
+.order-number-b::before,
+.order-number-b::after {
+  content: "";
+  width: 10px;
   height: 1px;
   background: var(--basic-black);
 }
+
 
 .features-list {
   display: flex;
@@ -592,6 +626,12 @@ ul .menu-left {
 
 .hotel-info-wrapper h2 {
   margin: 0;
+}
+
+.hotel-type {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
 }
 
 .hotel-image {
@@ -781,9 +821,7 @@ input[type=checkbox]:checked + label:before {
  .range-controls .scale {
    height: 2px;
    background-color: var(--basic-white);
-   mix-blend-mode: normal;
-   opacity: 0.3;
-   width: 305px;
+  width: 305px;
  }
 
  .range-controls .bar {

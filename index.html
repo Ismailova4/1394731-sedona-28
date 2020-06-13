@@ -11,10 +11,8 @@
   <body class="page-body">
 
      <header class="header-main">
-        
-      <div class="main-container"> 
-        
-          <nav class="header-navigation">
+       <div class="main-container"> 
+         <nav class="header-navigation">
            <img class="logo" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип города Седона"> 
             <ul class="site-navigation">
              <ul class="menu-left">
@@ -29,15 +27,10 @@
               <img src="img/intro-welcome.svg" width="456" height="350" alt="Добро пожаловать в Седону">
             </div>
             </ul>
-           
-          </nav>
+           </nav>
           <img class="mask" src="img/shape.png" width="1200" height="57">
-        
-       </div> 
-          
-
-        
-     </header>
+        </div>      
+      </header>
 
        <main class="main-container">
          <h1 class="visually-hidden">Sedona</h1>
@@ -58,7 +51,7 @@
           <ul class="features-list"> 
             <li class="list-bg">
               <h3>Настоящий городок</h3>
-              <span class="order-number">
+              <span class="order-number-w">
                 №1
               </span>
               <p class="sedona-info">
@@ -105,7 +98,7 @@
             </li> 
             <li class="list-bg">
               <h3>Там есть мост дъявола</h3>
-              <span class="order-number">
+              <span class="order-number-w">
                 №2
               </span>
               <p class="sedona-info">
@@ -117,7 +110,7 @@
            <ul class="features-list-second">
             <li>
               <h3>Небольшая площадь</h3>
-              <span class="order-number">
+              <span class="order-number-b">
                 №3
               </span>
               <p>
@@ -126,7 +119,7 @@
             </li>
             <li>
               <h3>Красивая дорога</h3>
-              <span class="order-number">
+              <span class="order-number-b">
                 №4
               </span>
               <p>
@@ -135,7 +128,7 @@
             </li>
             <li>
               <h3>Мало туристов</h3>
-              <span class="order-number">
+              <span class="order-number-b">
                 №5
               </span>
               <p>
@@ -210,14 +203,18 @@
          <input class="checkout-date" id="checkout-date" type="text" name="date" placeholder="01.01.2020">     
        </p>
        <div class="amount">
+       <div class="adults-amount">  
        <p>
          <label for="adults">Взрослые:</label>                  
          <input class="adults" id="adults" type="number" name="adults" >     
        </p>
+       </div>
+       <div class="childs-amount">
        <p>
          <label for="childs">Дети:</label>                  
          <input class="childs" id="childs" type="number" name="childs" >     
        </p>
+       </div>
        </div>
        <button class="button button-search" type="submit">Найти</button>
       </div>
