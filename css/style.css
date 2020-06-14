@@ -73,6 +73,10 @@ img {
   cursor: pointer;
 }
 
+.button-form:hover {
+  cursor: pointer;
+}
+
 .button {
   background-color: var(--basic-neutral);
   color: var(--basic-white);
@@ -129,6 +133,24 @@ img {
 
 /* Modal */
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .modal-login {
   top: 120px;
   bottom: auto;
@@ -136,12 +158,20 @@ img {
   padding: 50px 80px;
 }
 
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
 
 .modal-close {
   display: none;
 }
 
-.modal-show {
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.modal {
   display: block;
   font-weight: bold;
   color: var(--basic-black);
@@ -228,12 +258,12 @@ img {
   outline: none;
 }
 
-.checkin-date,
+/*.checkin-date,
 .checkout-date {
   background-image: url("../img/calendar.svg");
   background-position: right;
   background-repeat: no-repeat;
-}
+} */
 
 .adults-amount {
   display: flex;
@@ -587,6 +617,7 @@ ul .menu-left {
   /*width: 1200px;*/
   background-image: url("../img/bg.jpg");
   background-position: 50% -55%;
+  /*background-size: 1200px 217px;*/
   background-repeat: no-repeat;
   filter: blur(10px);
 }
