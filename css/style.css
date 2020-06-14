@@ -233,18 +233,10 @@ img {
   top: 150px;
 }
 
-.minus,
-.plus {
-  position: absolute;
-}
-
-.minus {
-  right: 50px;
-}
-
-.plus {
-  left: 255px;
-  top: 220px;
+.minus-plus {
+  
+  display: flex;
+  justify-content: space-between;
 }
 
 .amount {
