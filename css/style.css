@@ -768,14 +768,14 @@ ul .menu-left {
   padding: 0;
 }
 
-.by li:not(.price) {
+.by li:not(.by-price) {
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: var(--basic-neutral);
   opacity: 0.3;
 }
 
-.by .price {
+.by .by-price {
   color: var(--basic-neutral);
 }
 
@@ -875,6 +875,22 @@ input[type=checkbox]:checked + label:before {
 .up-down:hover {
   stroke: var(--basic-black);
   fill: var(--basic-black); 
+}
+
+.by-price:hover,
+.by-type:hover,
+.by-rate:hover {
+  cursor: pointer;
+}
+
+.by-type:hover,
+.by-rate:hover  {
+  color: var(--basic-dark-blue);
+}
+
+.by-type:active,
+.by-rate:active {
+  color: var(--basic-black);
 }
 
 /* range-slider */
