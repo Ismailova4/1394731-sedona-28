@@ -131,6 +131,9 @@ img {
   background-color: var(--basic-dark-blue);
 }
 
+.button-show:focus {
+  outline: none;
+}
 /* Modal */
 
 @keyframes bounce {
@@ -151,16 +154,13 @@ img {
   }
 }
 
-.modal-login {
-  top: 120px;
-  bottom: auto;
-  width: 568px;
-  padding: 50px 80px;
-}
-
 .modal-show {
   display: block;
   animation: bounce 0.6s;
+  position: fixed;
+  top: 135px;
+  left: 506px;
+  bottom: auto;
 }
 
 .modal-close {
@@ -221,24 +221,6 @@ img {
   align-items: baseline;
 }
 
-.calendar-icon-1 {
-  position: absolute;
-  right: 65px;
-  top: 80px;
-}
-
-.calendar-icon-2 {
-  position: absolute;
-  right: 65px;
-  top: 150px;
-}
-
-.minus-plus {
-  
-  display: flex;
-  justify-content: space-between;
-}
-
 .amount {
   display: flex;
   justify-content: space-between;
@@ -283,6 +265,10 @@ img {
   outline: none;
 }
 
+.search-form input[type="number"] {
+  text-align: center;
+}
+
 .adults-amount p {
   display: flex;
   width: 225px;
@@ -297,9 +283,50 @@ img {
   align-items: baseline;
 }
 
-/*.amount .childs {
-  padding-right: 40px;
-} */
+.calendar-icon-1 {
+  position: absolute;
+  right: 65px;
+  top: 80px;
+}
+
+.calendar-icon-2 {
+  position: absolute;
+  right: 65px;
+  top: 150px;
+}
+
+.minus {
+  position: absolute;
+  left: 170px;
+  top: 235px;
+}
+
+.plus {
+  position: absolute;
+  left: 253px;
+  top: 231px;
+}
+
+.minus-childs {
+  position: absolute;
+  top: 235px;
+  right: 156px;
+}
+
+.plus-childs {
+  position: absolute;
+  top: 231px;
+  right: 70px;
+}
+
+.calendar-icon-1:hover,
+.calendar-icon-2:hover,
+.minus:hover,
+.plus:hover,
+.minus-childs:hover,
+.plus-childs:hover {
+  cursor: pointer;
+}
 
 /* Grid */
 
@@ -456,6 +483,7 @@ ul .menu-left {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  line-height: 36px;
   margin: 0;
   width: 251px;
 }
@@ -465,6 +493,10 @@ ul .menu-left {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
+}
+
+.footer-contacts h2 {
+  margin: 0;
 }
 
 .social {
@@ -487,7 +519,7 @@ ul .menu-left {
   display: flex;
   width: 195px;  
   justify-content: space-between;
-  line-height: 26px;
+  
 }
 
 .developer {
@@ -647,10 +679,6 @@ ul .menu-left {
   line-height: 21px;
   color: var(--basic-white);
 }
-
-/*.hotels {
-  margin-top: 80px;
-}*/
 
 .hotels-list  {
   display: flex;
