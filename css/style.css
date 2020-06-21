@@ -107,7 +107,7 @@ img {
   font-size: 21px;
   width: 568px;
   height: 86px;
-  padding: 30px 125px 30px 124px;
+  padding: 30px 138px 30px 138px;
   justify-content: flex-end;
   cursor: pointer;
 }
@@ -164,12 +164,10 @@ img {
 .modal {
   display: none;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 2181px;
+  left: 494px;
   animation: bounce 0.6s;
-  
+  z-index: 4;
   bottom: auto;
   font-weight: bold;
   color: var(--basic-black);
@@ -203,12 +201,15 @@ img {
   flex-direction: column;
   justify-content: center;
   padding: 55px;
+  width: 458px;
+  height: 284px;
 }
 
 .modal .button-search {
   display: block;
   padding: 16px 181px 16px 182px;
   margin-top: 30px;
+  margin-bottom: 15px;
   font-size: 21px;
 }
 
@@ -224,8 +225,14 @@ img {
   width: 458px;
 }
 
+.search-form {
+  /*padding: 55px;*/
+  width: 568px;
+  height: 395px;
+}
+
 .search-form input {
-  padding-left: 5px;
+  padding-left: 10px;
   padding-top: 5px;
 }
 
@@ -281,36 +288,36 @@ img {
 .calendar-icon-1 {
   position: absolute;
   right: 65px;
-  top: 80px;
+  top: 64px;
 }
 
 .calendar-icon-2 {
   position: absolute;
   right: 65px;
-  top: 150px;
+  top: 135px;
 }
 
 .minus {
   position: absolute;
   left: 170px;
-  top: 235px;
+  top: 220px;
 }
 
 .plus {
   position: absolute;
   left: 253px;
-  top: 231px;
+  top: 216px;
 }
 
 .minus-childs {
   position: absolute;
-  top: 235px;
+  top: 220px;
   right: 156px;
 }
 
 .plus-childs {
   position: absolute;
-  top: 231px;
+  top: 216px;
   right: 70px;
 }
 
@@ -478,6 +485,21 @@ ul .menu-left {
   line-height: 24px; 
   text-align: center;
   min-height: 290px;
+}
+
+/*.booking-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 204px;
+} */
+
+
+.search {
+  position: absolute;
+  top: 2126px;
+  left: 494px;
+  width: 568px;
 }
 
 .sedona-info {

@@ -20,6 +20,7 @@ buttonBooking.addEventListener("click", function (evt) {
    evt.preventDefault();
    bookingForm.classList.add("modal-show");
 
+   
    if (storage) {//если в локальном хранилище есть значения checkin-date и checkout-date, то при открытии модалки сразу запишем их
        checkinDate.value = storage;
        checkoutDate.value = storage;
@@ -30,6 +31,7 @@ buttonBooking.addEventListener("click", function (evt) {
 
    checkinDate.focus();//устанавливаю фокус в поле checkin-date при открытии модалки
 });
+
 
 /* formClose.addEventListener("click", function (evt) {
     evt.preventDefault();
