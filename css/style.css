@@ -57,11 +57,6 @@ img {
   margin: -1px;
 }
 
-.booking {
-  line-height: 24px; 
-  text-align: center;
-}
-
  /* buttons */
 
 .button-form {
@@ -107,7 +102,7 @@ img {
   padding: 3px 17px 3px 16px;
 }
 
-.booking .button-booking {
+.search .button-booking {
   background-color: var(--basic-dark);
   font-size: 21px;
   width: 568px;
@@ -167,8 +162,8 @@ img {
 }
 
 .modal {
-  display: block;
-  position: fixed;
+  display: none;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -480,6 +475,8 @@ ul .menu-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  line-height: 24px; 
+  text-align: center;
   min-height: 290px;
 }
 
@@ -671,6 +668,10 @@ ul .menu-left {
 .image {
   margin: 0;
   padding: 0;
+}
+
+.map p {
+  margin: 0;
 }
 
 .map iframe {

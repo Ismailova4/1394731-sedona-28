@@ -1,5 +1,5 @@
-var buttonBooking = document.querySelector(".button-booking");//нахожу кнопку открытия модалки
-var bookingForm = document.querySelector(".modal-inner");//нахожу модальное окно
+var buttonBooking = document.querySelector(".button-booking");
+var bookingForm = document.querySelector(".modal");
 var checkinDate = document.querySelector(".checkin-date");
 var checkoutDate = document.querySelector(".checkout-date");
 var searchForm = document.querySelector(".search-form");//нахожу саму форму
@@ -17,8 +17,8 @@ try {
 }
 
 buttonBooking.addEventListener("click", function (evt) {
-   evt.preventDefault();//отключаю действие по умолчанию - переход по ссылке
-   bookingForm.classList.add("modal-show");//добавляю класс modal-show, чтобы показать модалку
+   evt.preventDefault();
+   bookingForm.classList.add("modal-show");
 
    if (storage) {//если в локальном хранилище есть значения checkin-date и checkout-date, то при открытии модалки сразу запишем их
        checkinDate.value = storage;
