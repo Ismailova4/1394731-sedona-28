@@ -1,6 +1,5 @@
-var buttonForm = document.querySelector(".button-form");//нахожу кнопку открытия модалки
-var bookingForm = document.querySelector(".modal");//нахожу модальное окно
-var formClose = document.querySelector(".modal-close");
+var buttonBooking = document.querySelector(".button-booking");//нахожу кнопку открытия модалки
+var bookingForm = document.querySelector(".modal-inner");//нахожу модальное окно
 var checkinDate = document.querySelector(".checkin-date");
 var checkoutDate = document.querySelector(".checkout-date");
 var searchForm = document.querySelector(".search-form");//нахожу саму форму
@@ -17,7 +16,7 @@ try {
    isStorageSupport = false;
 }
 
-buttonForm.addEventListener("click", function (evt) {
+buttonBooking.addEventListener("click", function (evt) {
    evt.preventDefault();//отключаю действие по умолчанию - переход по ссылке
    bookingForm.classList.add("modal-show");//добавляю класс modal-show, чтобы показать модалку
 

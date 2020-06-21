@@ -5,11 +5,14 @@
   --basic-brown: #604e43;
   --basic-dark: #766357;
   --basic-grey: #666666;
+  --basic-slightly-grey: #a9a9a9;
+  --basic-light-grey: #bdbbbc; 
   --basic-dark-blue: #5496bd;
   --basic-blue: #669ec0;
   --basic-neutral: #81b3d2;
   --basic-neutral-light: #eBeBeB;;
   --basic-extra-light: #eeeeee;
+  --basic-supreme-light: #cacaca;
   --basic-light: #e5e5e5;
   --basic-white: #ffffff;
 
@@ -80,7 +83,7 @@ img {
 .button {
   background-color: var(--basic-neutral);
   color: var(--basic-white);
-  font-size: 21px;
+  font-size: 14px;
   font-style: inherit;
   font-weight: bold;
   text-transform: inherit;
@@ -98,20 +101,28 @@ img {
 }
 
 .button-hotel {
+  display: block;
   font-size: 14px;
   font-style: normal;
   padding: 3px 17px 3px 16px;
 }
 
-.button-booking {
+.booking .button-booking {
   background-color: var(--basic-dark);
-  font-size: 14px;
-  padding: 3px 16px 3px 17px;
+  font-size: 21px;
+  width: 568px;
+  height: 86px;
+  padding: 30px 125px 30px 124px;
+  justify-content: flex-end;
+  cursor: pointer;
 }
 
-.button-hotel,
-.button-booking {
+.buttons .button-booking {
   display: block;
+  font-size: 14px;
+  font-style: normal;
+  padding: 7px 17px 7px 16px;
+  background-color: var(--basic-dark);
 }
 
 .button-booking:hover {
@@ -134,6 +145,7 @@ img {
 .button-show:focus {
   outline: none;
 }
+
 /* Modal */
 
 @keyframes bounce {
@@ -154,55 +166,44 @@ img {
   }
 }
 
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: bounce 0.6s;
+  
+  bottom: auto;
+  font-weight: bold;
+  color: var(--basic-black);
+  line-height: 26px;
+  width: 568px;
+  height: 395px;
+  background-color: var(--basic-white);
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
 .modal-show {
   display: block;
-  animation: bounce 0.6s;
-  position: fixed;
-  top: 135px;
-  left: 506px;
-  bottom: auto;
 }
 
 .modal-close {
   display: none;
 }
 
-.modal-error {
+/*.modal-error {
   animation: shake 0.6s;
-}
+} */
 
-.modal {
-  display: block;
+.modal .button-search {
+  font-size: 21px;
   font-weight: bold;
-  color: var(--basic-black);
-  background-color: var(--basic-white);
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-  line-height: 26px;
-  width: 568px;
-}
-
-.search-form {
-  width: 568px;
-  height: 395px;
-  background-color: var(--basic-white);
-}
-
-.modal .button-booking {
-  display: block;
-  width: 568px;
-  height: 86px;
-  padding: 30px 125px 30px 124px;
-}
-
-.modal .button-booking,
-.button-search {
-   font-size: 21px;
-   font-weight: bold;
-   cursor: pointer;
+  cursor: pointer;
  }
 
 .modal-inner {
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,6 +214,7 @@ img {
   display: block;
   padding: 16px 181px 16px 182px;
   margin-top: 30px;
+  font-size: 21px;
 }
 
 .modal .date {
@@ -252,17 +254,15 @@ img {
   border: none;
 }
 
+.search-form input[type="text"]:hover,
 .search-form input[type="text"]:hover {
   background-color: var(--basic-neutral-light);
 }
 
-.search-form input[type="text"]:focus {
-  background-color: var(--basic-white);
-  outline: none;
-}
-
+.search-form input[type="text"]:focus,
 .search-form input[type="number"]:focus {
-  outline: none;
+  background-color: var(--basic-white);
+  outline: 2px solid var(--basic-light);
 }
 
 .search-form input[type="number"] {
@@ -319,14 +319,35 @@ img {
   right: 70px;
 }
 
+.calendar-icon-1,
+.calendar-icon-2,
+.minus, .plus,
+.minus-childs,
+.plus-childs {
+  fill: var(--basic-slightly-grey);
+  cursor: pointer;
+}
+
 .calendar-icon-1:hover,
 .calendar-icon-2:hover,
 .minus:hover,
 .plus:hover,
 .minus-childs:hover,
 .plus-childs:hover {
+  fill: var(--basic-black);
   cursor: pointer;
 }
+
+.calendar-icon-1:active,
+.calendar-icon-2:active,
+.minus:active,
+.plus:active,
+.minus-childs:active,
+.plus-childs:active {
+  fill: var(--basic-neutral);
+  cursor: pointer;
+}
+
 
 /* Grid */
 
@@ -426,6 +447,7 @@ ul .menu-left {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 14px;
   height: 56px;
   background-color: var(--basic-white);
 } 
@@ -450,11 +472,14 @@ ul .menu-left {
   color: var(--basic-dark);
 }
 
+.site-navigation a:focus {
+  color: var(--basic-dark);
+}
+
 .booking {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   min-height: 290px;
 }
 
@@ -519,12 +544,20 @@ ul .menu-left {
   display: flex;
   width: 195px;  
   justify-content: space-between;
-  
 }
 
 .developer {
   align-self: center;  
 }
+
+.developer-logo:hover {
+  fill: var(--basic-neutral);
+}
+
+.developer-logo:active {
+  fill: var(--basic-light-grey);
+}
+
 
 /* main */
 
@@ -611,7 +644,6 @@ ul .menu-left {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   min-height: 256px;
   list-style: none;
   margin: 0;
@@ -643,17 +675,15 @@ ul .menu-left {
 
 .map iframe {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   border: none;
 }
 
 .map-image {
   position: absolute;
-  top: 0;
-  left: 0;
   z-index: 1;
   margin: 0;
-  }
+}
 
 /* hotels.html */
 
@@ -671,22 +701,26 @@ ul .menu-left {
 .form-container::before {
   content:"";
   position: absolute; 
-  left: 0; right: 0; top: 0; bottom: 0;
+  left: 0;
+  right: 0;
+  top: 56px; 
+  bottom: 0;
   z-index: -1;
-  /*width: 1200px;*/
   background-image: url("../img/bg.jpg");
-  background-position: 50% -55%;
-  /*background-size: 1200px 217px;*/
-  border-bottom: 2px solid var(--basic-grey);
+  background-position: 50% 100%;
+  background-size: 1200px 270px;
+  /*border-bottom: 2px solid var(--basic-grey);*/
   background-repeat: no-repeat;
   filter: blur(10px);
+  height: 270px;
 }
 
 .form {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 217px;
+  min-height: 270px;
+  height: 270px;
   font-size: 16px;
   line-height: 21px;
   color: var(--basic-white);
@@ -793,9 +827,20 @@ ul .menu-left {
 
 .up-down {
   background-color: transparent;
+  fill: var(--basic-supreme-light);
   outline: none;
   border: none;
+  cursor: pointer;
 }
+
+.up-down:hover {
+  fill: var(--basic-black);
+}
+
+.up-down:active {
+  fill: var(--basic-neutral);
+}
+
 
 .group {
   display: flex;
@@ -883,12 +928,6 @@ input[type=checkbox]:checked + label:before {
   padding: 3px 15px 3px 12px;
 }
 
-.up-down:hover,
-.up-down:hover {
-  stroke: var(--basic-black);
-  fill: var(--basic-black); 
-}
-
 .by-price:hover,
 .by-type:hover,
 .by-rate:hover {
@@ -940,7 +979,7 @@ input[type=checkbox]:checked + label:before {
   padding-top: 20px;
   border-radius: 5px;
  }
-
+ 
  .range-controls .scale {
    height: 2px;
    background-color: var(--basic-white);
@@ -1034,6 +1073,21 @@ input[type=checkbox]:checked + label:before {
   font-size: 14px;
   line-height: 21px;
   background-color: transparent;
+  border: 2px solid var(--basic-white);
+  cursor: pointer;
+  padding: 7px 36px 8px 35px;
+}
+
+.button-show:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  text-transform: inherit;
+  color: var(--basic-black);
+  font-size: 14px;
+  line-height: 21px;
+  background-color: var(--basic-white);
   border: 2px solid var(--basic-white);
   cursor: pointer;
   padding: 7px 36px 8px 35px;
