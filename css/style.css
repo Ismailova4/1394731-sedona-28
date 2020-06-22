@@ -721,6 +721,10 @@ ul .menu-left {
   justify-content: center;
 }
 
+.form-container {
+  height: 217px;
+}
+
 .form-container::before {
   content:"";
   position: absolute; 
@@ -729,24 +733,45 @@ ul .menu-left {
   top: 56px; 
   bottom: 0;
   z-index: -1;
-  background-image: url("../img/bg.jpg");
-  background-position: 50% 100%;
-  background-size: 1200px 270px;
-  /*border-bottom: 2px solid var(--basic-grey);*/
-  background-repeat: no-repeat;
-  filter: blur(10px);
-  height: 270px;
+  width: 1200px;
+  height: 217px;
+  margin: 0 auto;
+  background-size: 1200px 217px;
+  background-image: url("../img/background_hotels-min.png");
+  background-repeat: no-repeat; 
 }
 
 .form {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  min-height: 270px;
-  height: 270px;
+  min-height: 217px;
+  height: 217px;
   font-size: 16px;
   line-height: 21px;
   color: var(--basic-white);
+}
+
+.filter-type {
+  display: flex;
+  justify-content: space-between;
+  width: 392px;
+}
+
+.checkbox {
+  margin-right: 16px;
+  cursor: pointer;
+} 
+
+.checkbox-checked {
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.group li {
+  display: flex;
+  justify-content: flex-start;
+  width: 140px;
 }
 
 .hotels-list  {
@@ -885,7 +910,7 @@ ul .menu-left {
   display: none;
 }
 
-input[type=checkbox] + label:before {
+/* input[type=checkbox] + label:before { 
   content: "\2713";
   display: inline-block;
   border: 2px solid var(--basic-white);
@@ -898,8 +923,8 @@ input[type=checkbox] + label:before {
   text-align: center;
   vertical-align: middle;
   transition: color ease .3s;
-  cursor: pointer;
-}
+  cursor: pointer; 
+} */
 
 input[type=checkbox]:checked + label:before {
   color: var(--basic-white);
@@ -1030,6 +1055,17 @@ input[type=checkbox]:checked + label:before {
   cursor: pointer;
 }
 
+.price-control .min-price::after {
+  content: "";
+  position: relative;
+  left: 40px;
+  bottom: 5px;
+  width: 22px;
+  height: 2px;
+  transform: rotate(90deg);
+  background: var(--basic-white);
+}
+
 .range-controls .toggle-min {
   left: 0;
 }
@@ -1061,7 +1097,7 @@ input[type=checkbox]:checked + label:before {
 .price-control {
   display: flex;
   justify-content: space-around;
-  width: 317px;
+  width: 313px;
   height: 36px;
   border: 2px solid var(--basic-white);
 }
