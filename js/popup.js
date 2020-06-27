@@ -1,4 +1,4 @@
-var buttonBooking = document.querySelector(".button-booking");
+var buttonBooking = document.querySelector(".search-button-booking");
 var bookingForm = document.querySelector(".modal");
 var checkinDate = document.querySelector(".checkin-date");
 var checkoutDate = document.querySelector(".checkout-date");
@@ -18,7 +18,7 @@ try {
 
 buttonBooking.addEventListener("click", function (evt) {
    evt.preventDefault();
-   bookingForm.classList.add("modal-show");
+   bookingForm.classList.toggle("modal-show");
 
    
    if (storage) {//если в локальном хранилище есть значения checkin-date и checkout-date, то при открытии модалки сразу запишем их
@@ -32,19 +32,12 @@ buttonBooking.addEventListener("click", function (evt) {
    checkinDate.focus();//устанавливаю фокус в поле checkin-date при открытии модалки
 });
 
-
-/* formClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    bookingForm.classList.remove("modal-show");
-    bookingForm.classList.remove("modal-error");
-}); */
-
 searchForm.addEventListener("submit", function (evt) {
     if (!checkinDate.value || !checkoutDate.value) {
-    evt.preventDefault();//если одно из двух полей формы не заполнено, отменяю отправку формы по умолчанию
-    //bookingForm.classList.remove("modal-error");//
-    //bookingForm.offsetWidth = loginPopup.offsetWidth;//
-    //bookingForm.classList.add("modal-error");//
+    evt.preventDefault();
+    bookingForm.classList.add("modal-error");//если данные в форме не проходят валидацию, добавляю modal-error
+    bookingForm.offsetWidth = loginPopup.offsetWidth;
+    
     } else {
        if(isStorageSupport)  {
         localStorage.setItem("checkin-date", checkinDate.value);
@@ -58,7 +51,7 @@ window.addEventListener("keydown", function(evt) {//если пользоват�
         if (bookingForm.classList.contains(".modal-show")) {
            evt.preventDefault();
            bookingForm.classList.remove(".modal-show");
-           //bookingForm.classList.remove("modal-error");//
+           bookingForm.classList.remove("modal-error");
         }  
      }
 
