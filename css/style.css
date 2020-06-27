@@ -110,6 +110,7 @@ img {
 }
 
 .search .button-booking {
+  position: absolute;
   background-color: var(--basic-dark);
   font-size: 21px;
   width: 568px;
@@ -491,6 +492,11 @@ ul .menu-left {
   color: var(--basic-dark);
 }
 
+.header .menu-right .current-page {
+  color: var(--basic-dark);
+  cursor: pointer;
+}
+
 .booking {
   display: flex;
   flex-direction: column;
@@ -505,6 +511,7 @@ ul .menu-left {
   top: 2126px;
   left: 494px;
   width: 568px;
+  height: 86px;
 }
 
 .sedona-info {
@@ -515,7 +522,6 @@ ul .menu-left {
 
 .footer {
   position: relative; 
-  bottom: 0;
   z-index: 999;
   background: rgba(255, 255, 255, 0.9);
 }
@@ -532,7 +538,8 @@ ul .menu-left {
 .footer-contacts {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  height: 78px;
   align-items: center;
   line-height: 36px;
   margin: 0;
@@ -593,6 +600,7 @@ ul .menu-left {
   padding: 0;
   margin: 0 auto;
 }
+
 /* main */
 
 .intro {
@@ -707,18 +715,22 @@ ul .menu-left {
   padding: 0;
 }
 
-.map p {
+.map {
   position: relative;
   z-index: 1;
+  margin-bottom: -125px;
 }
 
 .map iframe {
-  position: relative;
-  z-index: 1;
+ 
   border: none;
 }
 
 /* hotels.html */
+
+.page-catalog {
+  height: 540px;
+}
 
 .header {
   font-weight: bold;
@@ -779,22 +791,31 @@ ul .menu-left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 392px;
+  height: 452px;
+  padding: 0;
   margin: 0;
-  padding: 30px 0;
   list-style: none;
 }
 
 .hotel-wrap {
   display: flex;
   justify-content: flex-start;
+  padding-left: 72px;
+  height: 90px;
 }
 
 .hotels-list .hotel-intro {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--basic-light);
 } 
+
+.hotels-list .hotel-intro:first-child {
+  border-top: 1px solid var(--basic-light);
+}
 
 .hotel-info-wrapper {
   display: flex;
@@ -824,11 +845,6 @@ ul .menu-left {
 
 /* output */
 
-.page-catalog {
-  padding-left: 72px;
-  padding-right: 72px;
-}
-
 .output {
   display: flex;
   justify-content: space-between;
@@ -842,6 +858,11 @@ ul .menu-left {
   justify-content: space-between;
   align-items: baseline;
   width: 517px;
+  padding-left: 72px;
+}
+
+.up-down-btn {
+  padding-right: 72px;
 }
 
 .found {
@@ -954,6 +975,7 @@ input[type=checkbox]:checked + label:before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-right: 72px;
 }
 
 .rating-range {
