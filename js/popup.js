@@ -19,6 +19,7 @@ try {
 buttonBooking.addEventListener("click", function (evt) {
    evt.preventDefault();
    bookingForm.classList.toggle("modal-show");
+   bookingForm.classList.remove("modal-error");
 
    
    if (storage) {//если в локальном хранилище есть значения checkin-date и checkout-date, то при открытии модалки сразу запишем их
@@ -36,8 +37,7 @@ searchForm.addEventListener("submit", function (evt) {
     if (!checkinDate.value || !checkoutDate.value) {
     evt.preventDefault();
     bookingForm.classList.add("modal-error");//если данные в форме не проходят валидацию, добавляю modal-error
-    bookingForm.offsetWidth = loginPopup.offsetWidth;
-    
+        
     } else {
        if(isStorageSupport)  {
         localStorage.setItem("checkin-date", checkinDate.value);

@@ -111,12 +111,12 @@ img {
 
 .search-button-booking {
   position: relative;
-  
+  margin-top: 45px;
   font-size: 21px;
   width: 568px;
   height: 86px;
   padding: 30px 138px 30px 138px;
-  margin-bottom: -125px;
+  margin-bottom: -80px;
   background-color: var(--basic-dark);
   cursor: pointer;
 }
@@ -273,12 +273,6 @@ img {
   width: 458px;
 }
 
-/*.search-form {
-  width: 568px;
-  height: 395px;
-}
- */
-
 .search-form input {
   padding-left: 10px;
   padding-top: 5px;
@@ -426,20 +420,23 @@ img {
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
-  min-height: 56px;
+  height: 56px;
   color: var(--basic-black);
   background-color: var(--basic-white);
-  background-image: url("../img/bg.jpg");               
-  background-position: top center;
-  background-repeat: no-repeat; 
   position: relative;
   width: 1200px;
-  height: 565px;
 }
 
 .mask {
   position: absolute;
-  top: 453px;
+  top: 510px;
+  
+}
+
+.intro-sedona {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .header-navigation {
@@ -448,10 +445,11 @@ img {
   align-items: center; 
 }
 
-.header-image {
+.intro-image {
   position: relative;
   align-content: center;
-  margin-top: 40px;
+  margin-top: 80px;
+  margin-bottom: 130px;
   width: 456px;
   height: 350px;
 } 
@@ -642,9 +640,12 @@ ul .menu-left {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 175px;
+  height: 738px;
   text-align: center;
   line-height: 26px;
+  background-image: url("../img/bg.jpg");               
+  background-position: top center;
+  background-repeat: no-repeat; 
 }
 
 .intro h3 {
