@@ -17,8 +17,8 @@ try {
 }
 
 buttonBooking.addEventListener("click", function (evt) {
-   evt.preventDefault();
-   bookingForm.classList.toggle("modal-show");
+   evt.preventDefault(); 
+   bookingForm.classList.toggle("modal-hide");
    bookingForm.classList.remove("modal-error");
 
    
@@ -32,6 +32,7 @@ buttonBooking.addEventListener("click", function (evt) {
 
    checkinDate.focus();//устанавливаю фокус в поле checkin-date при открытии модалки
 });
+
 
 searchForm.addEventListener("submit", function (evt) {
     if (!checkinDate.value || !checkoutDate.value) {
@@ -48,9 +49,9 @@ searchForm.addEventListener("submit", function (evt) {
 
 window.addEventListener("keydown", function(evt) {//если пользователь нажимает клавишу esc и если модалка открыта, закрываю ее
      if (evt.keyCode === 27) {
-        if (bookingForm.classList.contains(".modal-show")) {
+        if (bookingForm.classList.contains(".modal-hide")) {
            evt.preventDefault();
-           bookingForm.classList.remove(".modal-show");
+           bookingForm.classList.remove(".modal-hide");
            bookingForm.classList.remove("modal-error");
         }  
      }
