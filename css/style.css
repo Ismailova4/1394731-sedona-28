@@ -111,7 +111,7 @@ img {
 
 .search-button-booking {
   position: relative;
-  margin-top: 45px;
+  margin-top: 32px;
   font-size: 21px;
   width: 568px;
   height: 86px;
@@ -448,7 +448,7 @@ img {
   position: relative;
   align-content: center;
   margin-top: 80px;
-  margin-bottom: 130px;
+  margin-bottom: 110px;
   width: 456px;
   height: 350px;
 } 
@@ -571,6 +571,21 @@ img {
   margin: 0 auto;
 }
 
+.footer .footer-contacts,
+.footer .footer-social,
+.footer .footer-copyright {
+  width: 350px;
+}
+
+.footer .footer-social {
+  display: flex;
+  justify-content: center;
+}
+
+.footer .developer {
+  margin-right: 5px;
+}
+
 .footer-contacts {
   display: flex;
   flex-direction: column;
@@ -613,8 +628,7 @@ img {
 
 .footer-copyright {
   display: flex;
-  width: 195px;  
-  justify-content: space-between;
+  justify-content: center;
   color: var(--basic-black);
 }
 
@@ -686,11 +700,18 @@ img {
 
 .feature-item h3 {
   font-size: 21px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .feature-item {
   list-style: none;
   text-align: center;
+}
+
+.order-number-w {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .order-number-w,
@@ -726,9 +747,10 @@ img {
 }
 
 .features-list-first {
-  display: grid;
-  min-height: 330px;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  height: 330px;
+  flex-direction: row;
+  justify-content: space-around;
   padding: 0;
   align-items: center;
   margin: 0;
@@ -749,6 +771,10 @@ img {
   background-color: var(--basic-neutral);
 }
 
+.list-bg h3 {
+  text-align: center;
+}
+
 .features-list-second {
   display: flex;
   justify-content: space-around;
@@ -763,30 +789,53 @@ img {
 .features-list-second li {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   height: 150px;
 }
 
 .features-list-second p {
   text-align: center;
+  /*margin-bottom: 75px;*/
 }
 
 .features-list-second h3 {
   font-size: 21px;
   line-height: 21px;
+  text-align: center;
+  margin: 0;
 }
+
+.order-number-b {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.sedona-feature {
+  margin-top: 0;
+}
+
 
 .image {
   margin: 0;
   padding: 0;
 }
 
+.trip-dates {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 .map {
   position: relative;
   z-index: 1;
-  margin-bottom: -125px;
+  margin-bottom: -145px;
   background-color: var(--basic-white);
+}
+
+.map p {
+  margin-top: 14px;
+  margin-bottom: 25px;
 }
 
 .map iframe {
